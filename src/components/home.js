@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
+import StackOverflow from 'react-icons/lib/fa/stack-overflow';
+import Steam from 'react-icons/lib/fa/steam';
+import Twitter from 'react-icons/lib/fa/twitter';
+import LinkedIn from 'react-icons/lib/fa/linkedin';
+import Github from 'react-icons/lib/fa/github';
+import { Col } from 'react-bootstrap';
+
+
+
 import Article from './article';
 
-const LANGUGE = 'en';
+
+const LANGUAGE = 'pl';
 
 const articles = [
   {
@@ -79,18 +89,18 @@ class Home extends Component {
 
         <header className="app-header">
           <h1 className="app-title">Adam Gajzlerowicz</h1>
-          <h2 className="app-sub-title">{t.jobTitle[LANGUGE]}</h2>
+          <h2 className="app-sub-title">{t.jobTitle[LANGUAGE]}</h2>
         </header>
 
         <main className="container">
 
           <section className="section-light">
-            <h1 className="section-heading">{t.pastProjects[LANGUGE]}</h1>
-            {articles.map((article)=><Article key={article.title.pl} {...article} />)}
+            <h1 className="section-heading">{t.pastProjects[LANGUAGE]}</h1>
+              {articles.map((article)=><Article key={article.title.pl} {...article} LANGUAGE={LANGUAGE}/>)}
           </section>
 
           <section className="section-dark">
-            <h1 className="section-heading">{t.pastProjects[LANGUGE]}</h1>
+            <h1 className="section-heading">{t.whatDoIDo[LANGUAGE]}</h1>
             <article>
               <dl>
                 <dt>Front-end</dt>
@@ -107,7 +117,15 @@ class Home extends Component {
 
         </main>
         <footer>
-          © {new Date().getFullYear()} Adam Gajzlerowicz
+          <Col sm={4}> © {new Date().getFullYear()} Adam Gajzlerowicz </Col>
+
+          <Col sm={8} className="footer-social">
+            <Twitter />
+            <Steam />
+            <LinkedIn />
+            <Github />
+            <StackOverflow  />
+          </Col>
 
         </footer>
       </div>

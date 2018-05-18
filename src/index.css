@@ -48,6 +48,7 @@ article {
     display: inline-block;
     width: 100%;
     background-color: black;
+    color: #d7d7d7;
 }
 
 .section-light {
@@ -56,3 +57,14 @@ article {
     background-color: #d7d7d7;
 }
 
+.footer-social svg{
+    float: right;
+    font-size: 20px;
+    margin: 0 16px;
+}
+
+footer {
+    display: inline-block;
+    width: 100%;
+    padding: 49px 22px;
+}
