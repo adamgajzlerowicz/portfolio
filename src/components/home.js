@@ -5,14 +5,12 @@ import Twitter from 'react-icons/lib/fa/twitter';
 import LinkedIn from 'react-icons/lib/fa/linkedin';
 import Github from 'react-icons/lib/fa/github';
 import { Col } from 'react-bootstrap';
-
+import Flag from 'react-world-flags'
 
 
 import Article from './article';
 
-
-const LANGUAGE = 'pl';
-
+// categories: fun, corporate, plugins, solo
 const articles = [
   {
     image: 'placeholder.png',
@@ -77,30 +75,44 @@ const t = {
     pl: 'Czym się zajmuję',
     en: 'What do I do',
   },
-
-
-
 }
 
 class Home extends Component {
+  constructor(props){
+    super(props);
+
+    const language = sessionStorage.getItem('language') || 'pl';
+
+    this.state = { language };
+  }
+
   render() {
+    const otherLangage = this.state.language === 'pl' ? 'en' : 'pl';
     return (
       <div className="app">
 
         <header className="app-header">
+          <div
+            onClick={()=>{
+              this.setState({ language: otherLangage })
+              sessionStorage.setItem('language', otherLangage);
+            }}
+            className="language">
+              <Flag code={ otherLangage === 'pl' ? 'pl' : 'gb' } height="16"/>
+          </div>
           <h1 className="app-title">Adam Gajzlerowicz</h1>
-          <h2 className="app-sub-title">{t.jobTitle[LANGUAGE]}</h2>
+          <h2 className="app-sub-title">{t.jobTitle[this.state.language]}</h2>
         </header>
 
         <main className="container">
 
           <section className="section-light">
-            <h1 className="section-heading">{t.pastProjects[LANGUAGE]}</h1>
-              {articles.map((article)=><Article key={article.title.pl} {...article} LANGUAGE={LANGUAGE}/>)}
+            <h1 className="section-heading">{t.pastProjects[this.state.language]}</h1>
+              {articles.map((article)=><Article key={article.title.pl} {...article} language={this.state.language}/>)}
           </section>
 
           <section className="section-dark">
-            <h1 className="section-heading">{t.whatDoIDo[LANGUAGE]}</h1>
+            <h1 className="section-heading">{t.whatDoIDo[this.state.language]}</h1>
             <article>
               <dl>
                 <dt>Front-end</dt>

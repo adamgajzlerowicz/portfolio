@@ -68,3 +68,9 @@ footer {
     width: 100%;
     padding: 49px 22px;
 }
+
+.language {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
