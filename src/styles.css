@@ -4,20 +4,19 @@ body {
   font-family: sans-serif;
 }
 .app-header {
-  background-color: #f5f8fa;
-  height: 150px;
-  padding: 20px;
-  color: black;
-  border: 1px solid rgba(0,0,0,.125);
-  text-align: center;
+   background-color: #f5f8fa;
+   padding: 62px;
+   color: black;
+   border: 1px solid rgba(0,0,0,.125);
+   text-align: center;
 }
 
 .app-title {
-  font-size: 1.5em;
+  font-size: 50px;
 }
 
 .app-sub-title {
-  font-size: 1.2em;
+  font-size: 30px;
 }
 
 .container {
@@ -27,10 +26,7 @@ body {
 }
 
 article {
-  max-width: 640px;
-  width: 640px;
-  margin: 20px auto;
-  display: block;
+  margin: 50px auto;
 }
 
 .promo-image {
@@ -42,19 +38,44 @@ article {
 .section-heading {
   text-align: center;
   padding: 2em;
+  color: white;
 }
 
-.section-dark{
-    display: inline-block;
-    width: 100%;
-    background-color: black;
-    color: #d7d7d7;
+.section-heading-dark {
+    color: black;
+    text-align: center;
+    padding: 2em;
 }
 
-.section-light {
+.article-heading {
+    color: #00FFF4;
+}
+
+.article-content {
+    color: #C5C6C8;
+}
+
+.section-light{
     display: inline-block;
     width: 100%;
-    background-color: #d7d7d7;
+    background-color: #f5f8fa;
+    color: black;
+}
+
+
+.section-dark {
+    display: inline-block;
+    width: 100%;
+    background-color: #1F2834;
+}
+
+hr {
+   display: block;
+   height: 1px;
+   border: 0;
+   border-top: 1px solid #00FFF6;
+   margin: 6em 0;
+   padding: 0;
 }
 
 .footer-social svg{
@@ -71,6 +92,12 @@ footer {
 
 .language {
     position: absolute;
+    top: 20px;
     right: 20px;
     cursor: pointer;
+}
+
+.full-height {
+    width: 100%;
+    float: left;
 }

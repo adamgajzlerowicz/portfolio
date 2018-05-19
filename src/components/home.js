@@ -71,9 +71,9 @@ const t = {
     pl: 'Projekty',
     en: 'Past projects'
   },
-  whatDoIDo:{
+  whatIDo:{
     pl: 'Czym się zajmuję',
-    en: 'What do I do',
+    en: 'What I do',
   },
 }
 
@@ -106,13 +106,13 @@ class Home extends Component {
 
         <main className="container">
 
-          <section className="section-light">
+          <section className="section-dark">
             <h1 className="section-heading">{t.pastProjects[this.state.language]}</h1>
               {articles.map((article)=><Article key={article.title.pl} {...article} language={this.state.language}/>)}
           </section>
 
-          <section className="section-dark">
-            <h1 className="section-heading">{t.whatDoIDo[this.state.language]}</h1>
+          <section className="section-light">
+            <h1 className="section-heading-dark">{t.whatIDo[this.state.language]}</h1>
             <article>
               <dl>
                 <dt>Front-end</dt>
