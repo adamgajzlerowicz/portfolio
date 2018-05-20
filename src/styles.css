@@ -5,7 +5,7 @@ body {
 }
 .app-header {
    background-color: #f5f8fa;
-   padding: 62px;
+   padding: 23vh 20px;
    color: black;
    border: 1px solid rgba(0,0,0,.125);
    text-align: center;
@@ -35,13 +35,16 @@ article {
   display: block;
 }
 
-.section-heading {
+.section-heading-light {
+    text-shadow: 1px 1px #00FFF4;
   text-align: center;
   padding: 2em;
   color: white;
 }
 
+
 .section-heading-dark {
+    text-shadow: 1px 1px #00FFF4;
     color: black;
     text-align: center;
     padding: 2em;
@@ -51,11 +54,12 @@ article {
     color: #00FFF4;
 }
 
-.article-content {
+.article-content-light {
     color: #C5C6C8;
 }
 
 .section-light{
+    padding-bottom: 50px;
     display: inline-block;
     width: 100%;
     background-color: #f5f8fa;
@@ -64,6 +68,7 @@ article {
 
 
 .section-dark {
+    padding-bottom: 50px;
     display: inline-block;
     width: 100%;
     background-color: #1F2834;
@@ -84,6 +89,28 @@ hr {
     margin: 0 16px;
 }
 
+footer a, footer a:visited {
+    color: black;
+   animation-iteration-count: 1;
+}
+
+footer a:hover {
+   color: #1F2834;
+   animation: 0.7s multicolor;
+}
+
+@keyframes multicolor {
+    0% {
+        color: black;
+    }
+    30% {
+        color: #00FFF4;
+    }
+    80% {
+        color: #1F2834;
+    }
+}
+
 footer {
     display: inline-block;
     width: 100%;
@@ -100,4 +127,11 @@ footer {
 .full-height {
     width: 100%;
     float: left;
+}
+.center-text {
+    text-align: center;
+}
+
+p {
+    font-size: 2rem;
 }
