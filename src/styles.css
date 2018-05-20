@@ -139,3 +139,11 @@ footer {
 p {
     font-size: 2rem;
 }
+
+#avatar {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 50%;
+}

@@ -10,6 +10,7 @@ import Flag from 'react-world-flags'
 
 
 import Article from './article';
+import avatar from '../images/avatar.jpg';
 
 
 /**
@@ -104,8 +105,8 @@ const t = {
     en: 'Past projects'
   },
   whatIDo:{
-    pl: 'Czym się zajmuję',
-    en: 'What I do',
+    pl: 'Co buduje?',
+    en: 'What I create?',
   },
   motivationHeading: {
     pl: 'Moja motywacja',
@@ -151,6 +152,7 @@ class Home extends Component {
           </div>
           <h1 className="app-title">Adam Gajzlerowicz</h1>
           <h2 className="app-sub-title">{t.jobTitle[this.state.language]}</h2>
+          <div id="avatar" style={{backgroundImage: avatar}}/>
         </header>
 
         <main className="container">
@@ -160,6 +162,7 @@ class Home extends Component {
             <div className="col-sm-6 col-sm-push-3 col-xs-12">
               <h1 className="section-heading">{t.whatIDo[this.state.language]}</h1>
               <p className="center-text article-content">{t.whatICreate[this.state.language]}</p>
+              <p className="center-text article-content"> {t.motivation[this.state.language]} </p>
             </div>
           </section>
 
@@ -168,39 +171,6 @@ class Home extends Component {
             <h1 className="section-heading">{t.pastProjects[this.state.language]}</h1>
               {articles.map((article)=><Article key={article.title.pl} {...article} language={this.state.language}/>)}
           </section>
-
-
-          <section className={`section-${getClassName(index++)}`}>
-            <h1 className="section-heading">{t.motivationHeading[this.state.language]}</h1>
-            <div className="col-sm-6 col-sm-push-3 col-xs-12">
-              <article className="center-text">
-                <p className="article-content"> {t.motivation[this.state.language]} </p>
-              </article>
-            </div>
-          </section>
-
-
-
-          <section className={`section-${getClassName(index++)}`}>
-            <div className="col-sm-6 col-sm-push-3 col-xs-12">
-              <h1 className="section-heading">{t.toolsIUse[this.state.language]}</h1>
-              <article className="center-text">
-                <dl>
-                  <dt>Front-end</dt>
-                    <dd>Javascript, React, Redux, CSS3, ES6</dd>
-                  <dt>Back-end</dt>
-                    <dd>Rest API, Graphql, NodeJS, PHP, Relational Databases</dd>
-                  <dt>Apps</dt>
-                    <dd>Mobile, Electron</dd>
-                  <dt>CMS</dt>
-                    <dd>Home made CMS</dd>
-                  <dt>Toolkit</dt>
-                    <dd>Vim, PHP storm, Sublime text</dd>
-                  </dl>
-                </article>
-            </div>
-          </section>
-
 
         </main>
         <footer>
