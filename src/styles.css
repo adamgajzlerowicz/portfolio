@@ -35,7 +35,7 @@ article {
   display: block;
 }
 
-.section-heading-light {
+.section-dark .section-heading {
     text-shadow: 1px 1px #00FFF4;
   text-align: center;
   padding: 2em;
@@ -43,7 +43,7 @@ article {
 }
 
 
-.section-heading-dark {
+.section-light .section-heading {
     text-shadow: 1px 1px #00FFF4;
     color: black;
     text-align: center;
@@ -54,7 +54,7 @@ article {
     color: #00FFF4;
 }
 
-.article-content-light {
+.section-dark .article-content {
     color: #C5C6C8;
 }
 
@@ -72,6 +72,10 @@ article {
     display: inline-block;
     width: 100%;
     background-color: #1F2834;
+}
+
+.section-dark article {
+    color: white;
 }
 
 hr {

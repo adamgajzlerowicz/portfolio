@@ -9,7 +9,7 @@ const Article = ({ image, description, title, category, language})=>{
                 <Col xs={12} md={4}> <img src={imagePath} className="promo-image" alt="logo" /> </Col>
                 <Col xs={12} md={8}>
                     <h2 className="article-heading">{title[language]}</h2>
-                    <p className="article-content-light">{description[language]}</p>
+                    <p className="article-content">{description[language]}</p>
                 </Col>
                 <Col xs={12}> <hr/> </Col>
             </article>

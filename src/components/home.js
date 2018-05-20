@@ -39,6 +39,8 @@ import Article from './article';
 
 */
 
+const getClassName = index => index % 2 === 0 ? 'dark' : 'light';
+
 
 // categories: fun, corporate, plugins, solo
 const articles = [
@@ -112,6 +114,14 @@ const t = {
   motivation: {
     pl: 'Lubię budować aplikacje które ułatwiają pracę i sprawiają że wykonywane zadania stają się  przyjemniejsze.',
     en: 'I like to create things that make people\'s live easier'
+  },
+  toolsIUse: {
+    pl: 'Wybrane technologie',
+    en: 'Tools I use'
+  },
+  whatICreate: {
+    en: 'I create awesome web applications!',
+    pl: 'Fantastyczne aplikacje internetowe!'
   }
 }
 
@@ -125,11 +135,12 @@ class Home extends Component {
   }
 
   render() {
+    let index = 0;
     const otherLangage = this.state.language === 'pl' ? 'en' : 'pl';
     return (
       <div className="app">
 
-        <header className="app-header">
+        <header className={`app-header section-${getClassName(index++)}`}>
           <div
             onClick={()=>{
               this.setState({ language: otherLangage })
@@ -144,20 +155,35 @@ class Home extends Component {
 
         <main className="container">
 
-          <section className="section-dark">
-            <h1 className="section-heading-light">{t.motivationHeading[this.state.language]}</h1>
+
+          <section className={`section-${getClassName(index++)}`}>
+            <div className="col-sm-6 col-sm-push-3 col-xs-12">
+              <h1 className="section-heading">{t.whatIDo[this.state.language]}</h1>
+              <p className="center-text article-content">{t.whatICreate[this.state.language]}</p>
+            </div>
+          </section>
+
+
+          <section className={`section-${getClassName(index++)}`}>
+            <h1 className="section-heading">{t.pastProjects[this.state.language]}</h1>
+              {articles.map((article)=><Article key={article.title.pl} {...article} language={this.state.language}/>)}
+          </section>
+
+
+          <section className={`section-${getClassName(index++)}`}>
+            <h1 className="section-heading">{t.motivationHeading[this.state.language]}</h1>
             <div className="col-sm-6 col-sm-push-3 col-xs-12">
               <article className="center-text">
-                <p className="article-content-light"> {t.motivation[this.state.language]} </p>
+                <p className="article-content"> {t.motivation[this.state.language]} </p>
               </article>
             </div>
           </section>
 
-          <section className="section-light">
+
+
+          <section className={`section-${getClassName(index++)}`}>
             <div className="col-sm-6 col-sm-push-3 col-xs-12">
-              <h1 className="section-heading-dark">{t.whatIDo[this.state.language]}</h1>
-              <p>I create awesome web applications!</p>
-              <p>For those, I use using following technologies</p>
+              <h1 className="section-heading">{t.toolsIUse[this.state.language]}</h1>
               <article className="center-text">
                 <dl>
                   <dt>Front-end</dt>
@@ -173,11 +199,6 @@ class Home extends Component {
                   </dl>
                 </article>
             </div>
-          </section>
-
-          <section className="section-dark">
-            <h1 className="section-heading-light">{t.pastProjects[this.state.language]}</h1>
-              {articles.map((article)=><Article key={article.title.pl} {...article} language={this.state.language}/>)}
           </section>
 
 
