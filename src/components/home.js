@@ -165,6 +165,7 @@ class Home extends Component {
               <h1 className="section-heading">{t.whatIDo[this.state.language]}</h1>
               <p className="center-text article-content">{t.whatICreate[this.state.language]}</p>
               <p className="center-text article-content"> {t.motivation[this.state.language]} </p>
+              <a href="#what-i-do" className="down"><Down /></a>
             </div>
           </section>
 
