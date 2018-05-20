@@ -152,7 +152,7 @@ class Home extends Component {
           </div>
           <h1 className="app-title">Adam Gajzlerowicz</h1>
           <h2 className="app-sub-title">{t.jobTitle[this.state.language]}</h2>
-          <div id="avatar" style={{backgroundImage: avatar}}/>
+          <div id="avatar" />
         </header>
 
         <main className="container">
