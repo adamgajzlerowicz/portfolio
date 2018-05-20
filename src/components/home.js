@@ -5,12 +5,12 @@ import Twitter from 'react-icons/lib/fa/twitter';
 import LinkedIn from 'react-icons/lib/fa/linkedin';
 import Github from 'react-icons/lib/fa/github';
 import Email from 'react-icons/lib/fa/envelope';
+import Down from 'react-icons/lib/fa/angle-down';
 import { Col } from 'react-bootstrap';
 import Flag from 'react-world-flags'
 
 
 import Article from './article';
-import avatar from '../images/avatar.jpg';
 
 
 /**
@@ -136,29 +136,31 @@ class Home extends Component {
   }
 
   render() {
-    let index = 0;
+    let index = 1;
     const otherLangage = this.state.language === 'pl' ? 'en' : 'pl';
     return (
       <div className="app">
 
-        <header className={`app-header section-${getClassName(index++)}`}>
-          <div
-            onClick={()=>{
-              this.setState({ language: otherLangage })
-              sessionStorage.setItem('language', otherLangage);
-            }}
-            className="language">
-              <Flag code={ otherLangage === 'pl' ? 'pl' : 'gb' } height="16"/>
-          </div>
+        <div
+          onClick={()=>{
+            this.setState({ language: otherLangage })
+            sessionStorage.setItem('language', otherLangage);
+          }}
+          className="language">
+            <Flag code={ otherLangage === 'pl' ? 'pl' : 'gb' } height="16"/>
+        </div>
+
+
+        <header className="app-header">
+          <div id="avatar" />
           <h1 className="app-title">Adam Gajzlerowicz</h1>
           <h2 className="app-sub-title">{t.jobTitle[this.state.language]}</h2>
-          <div id="avatar" />
+          <a href="#what-i-do" className="down"><Down /></a>
         </header>
 
         <main className="container">
 
-
-          <section className={`section-${getClassName(index++)}`}>
+          <section id="what-i-do" className={`section-${getClassName(index++)}`}>
             <div className="col-sm-6 col-sm-push-3 col-xs-12">
               <h1 className="section-heading">{t.whatIDo[this.state.language]}</h1>
               <p className="center-text article-content">{t.whatICreate[this.state.language]}</p>
