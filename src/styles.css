@@ -111,8 +111,12 @@ hr {
  padding: 0;
 }
 
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .footer-social svg{
-    float: right;
     font-size: 20px;
     margin: 0 16px;
 }
@@ -194,9 +198,10 @@ p {
 .what-i-do-inner h1.section-heading{
     padding: 20px;;
 }
-@media all and (max-width:640px) {
+@media all and (max-width:767px) {
 
     .app-header {
+        display: block;
         padding: 5vh 20px 0;
     }
 
@@ -212,8 +217,17 @@ p {
         flex: 1;
         font-size: 80px;
     }
-}
 
+    footer {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+}
 
 /* fonts */
 

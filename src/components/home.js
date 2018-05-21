@@ -44,6 +44,7 @@ import Article from './article';
 
 const getClassName = index => (index % 2 === 0 ? 'dark' : 'light');
 
+/* eslint-disable-next-line */
 const scrollToView = id => window.scroll({ top: document.getElementById(id).offsetTop, behavior: 'smooth' });
 
 // categories: fun, corporate, plugins, solo
