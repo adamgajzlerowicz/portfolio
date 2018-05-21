@@ -200,13 +200,17 @@ p {
 }
 @media all and (max-width:767px) {
 
-    .app-header {
+    .app-header, h1 {
         display: block;
         padding: 5vh 20px 0;
     }
 
-    .app-title {
+    .app-title h2{
         font-size: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
     }
 
     .app-sub-title {
