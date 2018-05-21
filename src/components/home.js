@@ -44,6 +44,7 @@ import Article from './article';
 
 const getClassName = index => (index % 2 === 0 ? 'dark' : 'light');
 
+const scrollToView = id => window.scroll({ top: document.getElementById(id).offsetTop, behavior: 'smooth' });
 
 // categories: fun, corporate, plugins, solo
 const articles = [
@@ -107,7 +108,7 @@ const t = {
     en: 'Past projects',
   },
   whatIDo: {
-    pl: 'Co buduje?',
+    pl: 'Co tworzę?',
     en: 'What I create?',
   },
   motivationHeading: {
@@ -158,17 +159,17 @@ class Home extends Component {
           <div id="avatar" />
           <h1 className="app-title">Adam Gajzlerowicz</h1>
           <h2 className="app-sub-title">{t.jobTitle[this.state.language]}</h2>
-          <a href="#what-i-do" className="down"><Down /></a>
+          <button onClick={() => scrollToView('what-i-do')} className="down"><Down /></button>
         </header>
 
         <main className="container">
 
           <section id="what-i-do" className={`center-text section-${getClassName(index++)}`}>
-            <div className="col-sm-6 col-sm-push-3 col-xs-12">
+            <div className="col-sm-6 col-sm-push-3 col-xs-12 what-i-do-inner">
               <h1 className="section-heading">{t.whatIDo[this.state.language]}</h1>
-              <p className="center-text article-content">{t.whatICreate[this.state.language]}</p>
-              <p className="center-text article-content"> {t.motivation[this.state.language]} </p>
-              <a href="#portfolio" className="down"><Down /></a>
+              <h3 className="center-text">{t.whatICreate[this.state.language]}</h3>
+              <h3 className="center-text"> {t.motivation[this.state.language]} </h3>
+              <button onClick={() => scrollToView('portfolio')} className="down"><Down /></button>
             </div>
           </section>
 
