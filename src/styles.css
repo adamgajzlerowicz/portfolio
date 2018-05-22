@@ -204,6 +204,7 @@ p {
     color: #ACADAE;
     border: none;
     Font-Family: 'Montserrat', sans-serif;
+    font-size: 10px;
 }
 
 #portfolio nav button.active {
