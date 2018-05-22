@@ -4,6 +4,17 @@ import { Col } from 'react-bootstrap';
 import translations from '../translations';
 
 class Article extends React.PureComponent {
+  constructor(props, context) {
+      super(props, context);
+
+      this.handleShow = this.handleShow.bind(this);
+      this.handleClose = this.handleClose.bind(this);
+
+      this.state = {
+        show: false
+      };
+    }
+
   render() {
     const {
       image, description, title, category, language,
