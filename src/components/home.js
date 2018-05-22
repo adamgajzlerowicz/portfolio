@@ -10,6 +10,7 @@ import Email from 'react-icons/lib/fa/envelope';
 import Down from 'react-icons/lib/fa/angle-down';
 import { Col } from 'react-bootstrap';
 import Flag from 'react-world-flags';
+import FlipMove from 'react-flip-move';
 
 
 import Article from './article';
@@ -95,7 +96,6 @@ const articles = [
       en: 'le name4 corpo',
     },
     category: 'corporate',
-
   },
 ];
 
@@ -147,6 +147,10 @@ const t = {
   solo: {
     pl: 'Projekty solo',
     en: 'solo',
+  },
+  all: {
+    pl: 'Wyczyść',
+    en: 'all',
   },
 };
 
@@ -202,12 +206,15 @@ class Home extends Component {
               <button onClick={() => this.setState({ filter: 'fun' })}> {t.fun[language]} </button> |
               <button onClick={() => this.setState({ filter: 'corporate' })}> {t.corporate[language]} </button> |
               <button onClick={() => this.setState({ filter: 'plugin' })}> {t.plugins[language]} </button> |
-              <button onClick={() => this.setState({ filter: 'solo' })}> {t.solo[language]} </button> |
+              <button onClick={() => this.setState({ filter: 'solo' })}> {t.solo[language]} </button> { filter && '|' }
+              { filter && <button onClick={() => this.setState({ filter: null })}> {t.all[language]} </button> }
             </nav>
-            {articles
-              .filter(article => !filter || article.category === filter)
-              .map(article => <Article key={article.title.pl} {...article} language={language} />)
-            }
+            <FlipMove>
+              {articles
+                .filter(article => !filter || article.category === filter)
+                .map(article => <Article key={article.title.pl} {...article} language={language} />)
+              }
+            </FlipMove>
           </section>
 
         </main>
