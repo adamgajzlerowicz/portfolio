@@ -58,7 +58,7 @@ const articles = [
       pl: 'le name1',
       en: 'le name1',
     },
-    category: 'application',
+    category: 'plugin',
   },
   {
     image: 'placeholder.png',
@@ -70,7 +70,7 @@ const articles = [
       pl: 'le name2',
       en: 'le name2',
     },
-    category: 'application',
+    category: 'solo',
   },
   {
     image: 'placeholder.png',
@@ -82,7 +82,7 @@ const articles = [
       pl: 'le name3',
       en: 'le name3',
     },
-    category: 'application',
+    category: 'fun',
   },
   {
     image: 'placeholder.png',
@@ -91,10 +91,10 @@ const articles = [
       en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas blanditiis itaque quaerat, dolore voluptatum, debitis laborum placeat voluptates! Eos reiciendis nulla esse expedita totam vero at quae ullam! Explicabo, soluta.',
     },
     title: {
-      pl: 'le name4',
-      en: 'le name4',
+      pl: 'le name4 corpo',
+      en: 'le name4 corpo',
     },
-    category: 'application',
+    category: 'corporate',
 
   },
 ];
@@ -177,7 +177,6 @@ class Home extends Component {
           <Flag code={otherLangage === 'pl' ? 'pl' : 'gb'} height="16" />
         </div>
 
-
         <header className="app-header">
           <div id="avatar" />
           <h1 className="app-title">Adam Gajzlerowicz</h1>
@@ -200,10 +199,10 @@ class Home extends Component {
             <h1 className="section-heading">{t.pastProjects[language]}</h1>
             <h4> {t.filter[language]} </h4>
             <nav>
-              <button> {t.fun[language]} </button> |
-              <button> {t.corporate[language]} </button> |
-              <button> {t.plugins[language]} </button> |
-              <button> {t.solo[language]} </button> |
+              <button onClick={() => this.setState({ filter: 'fun' })}> {t.fun[language]} </button> |
+              <button onClick={() => this.setState({ filter: 'corporate' })}> {t.corporate[language]} </button> |
+              <button onClick={() => this.setState({ filter: 'plugin' })}> {t.plugins[language]} </button> |
+              <button onClick={() => this.setState({ filter: 'solo' })}> {t.solo[language]} </button> |
             </nav>
             {articles
               .filter(article => !filter || article.category === filter)
