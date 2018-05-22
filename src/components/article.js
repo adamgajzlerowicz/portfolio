@@ -50,7 +50,6 @@ class Article extends React.PureComponent {
           <Col xs={12} sm={8}>
             <h2 className="article-heading">{title[language]}</h2>
             <p className="article-content">{description[language]}</p>
-            <p className="article-category">{translations.tags[language]}: {category}</p>
           </Col>
           <Col xs={12}> <hr /> </Col>
         </article>

@@ -201,13 +201,13 @@ p {
 #portfolio nav button {
     background: transparent;
     outline: none;
-    color: #00FFF4;
+    color: #ACADAE;
     border: none;
     Font-Family: 'Montserrat', sans-serif;
 }
 
 #portfolio nav button.active {
-    text-decoration: underline;
+    color: white;
 }
 
 #portfolio nav {
@@ -282,6 +282,12 @@ p {
     .down {
         flex: 1;
         font-size: 80px;
+        min-height: 80px;
+        max-height: 94px;
+    }
+
+    .down svg {
+        vertical-align: top !important;
     }
 
     footer {

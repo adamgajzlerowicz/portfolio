@@ -72,25 +72,25 @@ class Home extends Component {
                   className={filter === 'fun' ? 'active' : ''}
                 >
                   {t.fun[language]}
-                </button> |
+                </button>
                 <button
                   onClick={() => this.setState({ filter: 'corporate' })}
                   className={filter === 'corporate' ? 'active' : ''}
                 >
                   {t.corporate[language]}
-                </button> |
+                </button>
                 <button
                   onClick={() => this.setState({ filter: 'plugin' })}
                   className={filter === 'plugin' ? 'active' : ''}
                 >
                   {t.plugins[language]}
-                </button> |
+                </button>
                 <button
                   onClick={() => this.setState({ filter: 'solo' })}
                   className={filter === 'solo' ? 'active' : ''}
                 >
                   {t.solo[language]}
-                </button> |
+                </button>
                 <button
                   onClick={() => this.setState({ filter: null })}
                   className={filter === null ? 'active' : ''}
