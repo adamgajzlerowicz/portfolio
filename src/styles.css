@@ -260,11 +260,11 @@ p {
 
 @media all and (max-width:767px) {
 
-    .app-header, h1 {
-        padding: 5vh 0;
+    .app-header, #what-i-do {
+        padding: 7vh 0 10vh;
     }
 
-    h1.app-title {
+    h1.app-title,  h1 {
         font-size: 30px;
     }
     .app-title h2{
