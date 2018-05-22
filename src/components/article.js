@@ -32,8 +32,6 @@ class Article extends React.PureComponent {
     return (
       <div className="full-height">
         <article>
-
-
           <Modal show={this.state.show} onHide={this.handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>Modal heading</Modal.Title>
@@ -43,7 +41,7 @@ class Article extends React.PureComponent {
             </Modal.Body>
           </Modal>
           <Col xs={12} sm={4}>
-            <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
+            <Button bsStyle="link" onClick={this.handleShow} className="open-item">
               <img src={imagePath} className="promo-image" alt="logo" />
             </Button>
           </Col>
