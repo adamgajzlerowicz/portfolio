@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { Col } from 'react-bootstrap';
 
-const translations = {
-  tags: {
-    pl: 'Tagi',
-    en: 'Tags',
-  },
-};
+import translations from '../translations';
 
 class Article extends React.PureComponent {
   render() {
