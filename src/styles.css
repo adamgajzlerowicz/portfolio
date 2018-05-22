@@ -50,10 +50,6 @@ body {
     width: 100%;
 }
 
-article {
-  margin: 50px auto;
-}
-
 .promo-image {
   max-width: 100%;
   margin: 0 auto;
@@ -62,7 +58,7 @@ article {
 
 .section-dark .section-heading {
     text-align: center;
-    padding: 2em 0;
+    padding: 20px;
     color: white;
 }
 
@@ -70,7 +66,7 @@ article {
 .section-light .section-heading {
     color: black;
     text-align: center;
-    padding: 2em 0;
+    padding: 20px;
 }
 
 .article-heading {
@@ -154,6 +150,7 @@ footer {
     top: 20px;
     right: 20px;
     cursor: pointer;
+    z-index: 999;
 }
 
 
@@ -195,9 +192,40 @@ p {
  justify-content: space-between;
 }
 
-.what-i-do-inner h1.section-heading{
-    padding: 20px;;
+/* fonts */
+
+h1 {
+  Font-Family: 'Roboto', Sans-Serif;
+  Font-Size: 48px;
 }
+
+h2 {
+    Font-Family: 'Roboto', Sans-Serif;
+    Font-Size: 30px;
+}
+
+h3 {
+    Font-Family: 'Roboto', Sans-Serif;
+    Font-Size: 20px;
+}
+
+p {
+ Font-Family: 'Lora', Serif;
+ Font-Size: 14px;
+}
+
+@media all and (min-width:768px) {
+
+    #portfolio .section-heading {
+        padding: 2em 0;
+    }
+
+    article {
+      margin: 50px auto;
+    }
+
+}
+
 @media all and (max-width:767px) {
 
     .app-header, h1 {
@@ -231,27 +259,5 @@ p {
         margin-top: 40px;
     }
 
-}
-
-/* fonts */
-
-h1 {
-  Font-Family: 'Roboto', Sans-Serif;
-  Font-Size: 48px;
-}
-
-h2 {
-    Font-Family: 'Roboto', Sans-Serif;
-    Font-Size: 30px;
-}
-
-h3 {
-    Font-Family: 'Roboto', Sans-Serif;
-    Font-Size: 20px;
-}
-
-p {
- Font-Family: 'Lora', Serif;
- Font-Size: 14px;
 }
 

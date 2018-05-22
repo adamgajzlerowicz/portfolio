@@ -40,14 +40,13 @@ import Article from './article';
   Lyles-Sutherland CRM
   New Future Me document database
 
-*/
+  */
 
 const getClassName = index => (index % 2 === 0 ? 'dark' : 'light');
 
 /* eslint-disable-next-line */
-const scrollToView = id => window.scroll({ top: document.getElementById(id).offsetTop, behavior: 'smooth' });
+  const scrollToView = id => window.scroll({ top: document.getElementById(id).offsetTop, behavior: 'smooth' });
 
-// categories: fun, corporate, plugins, solo
 const articles = [
   {
     image: 'placeholder.png',
@@ -96,6 +95,7 @@ const articles = [
       en: 'le name4',
     },
     category: 'application',
+
   },
 ];
 
@@ -128,7 +128,30 @@ const t = {
     en: 'I create awesome web applications!',
     pl: 'Fantastyczne aplikacje internetowe!',
   },
+  filter: {
+    pl: 'Filtr',
+    en: 'Filter',
+  },
+  fun: {
+    pl: 'Dla przyjemności',
+    en: 'fun',
+  },
+  corporate: {
+    pl: 'Duże projekty',
+    en: 'corporate',
+  },
+  plugins: {
+    pl: 'Wtyczki',
+    en: 'plugins',
+  },
+  solo: {
+    pl: 'Projekty solo',
+    en: 'solo',
+  },
 };
+
+// categories: fun, corporate, plugins, solo
+
 
 class Home extends Component {
   constructor(props) {
@@ -147,9 +170,9 @@ class Home extends Component {
 
         <div
           onClick={() => {
-            this.setState({ language: otherLangage });
-            sessionStorage.setItem('language', otherLangage);
-          }}
+        this.setState({ language: otherLangage });
+        sessionStorage.setItem('language', otherLangage);
+      }}
           className="language"
         >
           <Flag code={otherLangage === 'pl' ? 'pl' : 'gb'} height="16" />
@@ -176,6 +199,7 @@ class Home extends Component {
 
           <section id="portfolio" className={`section-${getClassName(index++)}`}>
             <h1 className="section-heading">{t.pastProjects[this.state.language]}</h1>
+            <nav>Filter</nav>
             {articles.map(article => <Article key={article.title.pl} {...article} language={this.state.language} />)}
           </section>
 
