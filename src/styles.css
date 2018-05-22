@@ -186,10 +186,14 @@ p {
     padding: 13vh 20px 23vh;
 }
 
-.what-i-do-inner{
+.what-i-do-inner {
  display: flex;
  flex-direction: column;
  justify-content: space-between;
+}
+
+#portfolio h4 {
+    color: #C5C6C8;
 }
 
 /* fonts */

@@ -45,7 +45,7 @@ import Article from './article';
 const getClassName = index => (index % 2 === 0 ? 'dark' : 'light');
 
 /* eslint-disable-next-line */
-  const scrollToView = id => window.scroll({ top: document.getElementById(id).offsetTop, behavior: 'smooth' });
+const scrollToView = id => window.scroll({ top: document.getElementById(id).offsetTop, behavior: 'smooth' });
 
 const articles = [
   {
@@ -150,29 +150,28 @@ const t = {
   },
 };
 
-// categories: fun, corporate, plugins, solo
-
-
 class Home extends Component {
   constructor(props) {
     super(props);
 
     const language = sessionStorage.getItem('language') || 'pl';
 
-    this.state = { language };
+    this.state = { language, filter: null };
   }
 
   render() {
+    const { language, filter } = this.state;
     let index = 1;
-    const otherLangage = this.state.language === 'pl' ? 'en' : 'pl';
+    const otherLangage = language === 'pl' ? 'en' : 'pl';
+
     return (
       <div className="app">
 
         <div
           onClick={() => {
-        this.setState({ language: otherLangage });
-        sessionStorage.setItem('language', otherLangage);
-      }}
+            this.setState({ language: otherLangage });
+            sessionStorage.setItem('language', otherLangage);
+          }}
           className="language"
         >
           <Flag code={otherLangage === 'pl' ? 'pl' : 'gb'} height="16" />
@@ -190,17 +189,26 @@ class Home extends Component {
 
           <section id="what-i-do" className={`center-text section-${getClassName(index++)}`}>
             <div className="col-sm-6 col-sm-push-3 col-xs-12 what-i-do-inner">
-              <h1 className="section-heading">{t.whatIDo[this.state.language]}</h1>
-              <h3 className="center-text">{t.whatICreate[this.state.language]}</h3>
-              <h3 className="center-text"> {t.motivation[this.state.language]} </h3>
+              <h1 className="section-heading">{t.whatIDo[language]}</h1>
+              <h3 className="center-text">{t.whatICreate[language]}</h3>
+              <h3 className="center-text"> {t.motivation[language]} </h3>
               <button onClick={() => scrollToView('portfolio')} className="down"><Down /></button>
             </div>
           </section>
 
           <section id="portfolio" className={`section-${getClassName(index++)}`}>
-            <h1 className="section-heading">{t.pastProjects[this.state.language]}</h1>
-            <nav>Filter</nav>
-            {articles.map(article => <Article key={article.title.pl} {...article} language={this.state.language} />)}
+            <h1 className="section-heading">{t.pastProjects[language]}</h1>
+            <h4> {t.filter[language]} </h4>
+            <nav>
+              <button> {t.fun[language]} </button> |
+              <button> {t.corporate[language]} </button> |
+              <button> {t.plugins[language]} </button> |
+              <button> {t.solo[language]} </button> |
+            </nav>
+            {articles
+              .filter(article => !filter || article.category === filter)
+              .map(article => <Article key={article.title.pl} {...article} language={language} />)
+            }
           </section>
 
         </main>
