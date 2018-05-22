@@ -56,12 +56,10 @@ class Home extends Component {
         <main className="container">
 
           <section id="what-i-do" className={`center-text section-${getClassName(index++)}`}>
-            <div className="col-sm-6 col-sm-push-3 col-xs-12 what-i-do-inner">
-              <h1 className="section-heading">{t.whatIDo[language]}</h1>
-              <h3 className="center-text">{t.whatICreate[language]}</h3>
-              <h3 className="center-text"> {t.motivation[language]} </h3>
+              <h1 className="section-heading flexj">{t.whatIDo[language]}</h1>
+              <h3 className="center-text center width flex">{t.whatICreate[language]}</h3>
+              <h3 className="center-text center width flex"> {t.motivation[language]} </h3>
               <button onClick={() => scrollToView('portfolio')} className="down"><Down /></button>
-            </div>
           </section>
 
           <section id="portfolio" className={`section-${getClassName(index++)}`}>
@@ -72,31 +70,31 @@ class Home extends Component {
               <nav>
                 <button
                   onClick={() => this.setState({ filter: 'fun' })}
-                  className={filter === 'fun' && 'active'}
+                  className={filter === 'fun' ? 'active': ''}
                 >
                   {t.fun[language]}
                 </button> |
                 <button
                   onClick={() => this.setState({ filter: 'corporate' })}
-                  className={filter === 'corporate' && 'active'}
+                  className={filter === 'corporate' ? 'active': ''}
                 >
                   {t.corporate[language]}
                 </button> |
                 <button
                   onClick={() => this.setState({ filter: 'plugin' })}
-                  className={filter === 'plugin' && 'active'}
+                  className={filter === 'plugin' ? 'active': ''}
                 >
                   {t.plugins[language]}
                 </button> |
                 <button
                   onClick={() => this.setState({ filter: 'solo' })}
-                  className={filter === 'solo' && 'active'}
+                  className={filter === 'solo' ? 'active': ''}
                 >
                   {t.solo[language]}
                 </button> |
                 <button
                   onClick={() => this.setState({ filter: null })}
-                  className={filter === null && 'active'}
+                  className={filter === null ? 'active': ''}
                 > {t.all[language]}
                 </button>
               </nav>
