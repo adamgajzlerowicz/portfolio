@@ -203,6 +203,7 @@ p {
     outline: none;
     color: #00FFF4;
     border: none;
+    Font-Family: 'Montserrat', sans-serif;
 }
 
 #portfolio nav button.active {
@@ -259,11 +260,14 @@ p {
 @media all and (max-width:767px) {
 
     .app-header, h1 {
-        padding: 5vh 20px 0;
+        padding: 5vh 0;
     }
 
-    .app-title h2{
+    h1.app-title {
         font-size: 30px;
+    }
+    .app-title h2{
+        font-size: 22px;
     }
 
     h3 {
