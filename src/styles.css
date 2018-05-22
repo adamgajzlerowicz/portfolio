@@ -270,7 +270,7 @@ p {
 @media all and (max-width:767px) {
 
     .app-header, #what-i-do {
-        padding: 7vh 0 10vh;
+        padding: 7vh 10px 10vh;
     }
 
     h1.app-title,  h1 {
