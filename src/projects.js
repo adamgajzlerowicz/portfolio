@@ -141,30 +141,32 @@ const projects = [
 
 
   {
-    image: 'placeholder.png',
+    image: 'chata-malolata.png',
     description: {
-      pl: '',
-      en: '',
+      pl: 'Aplikacja pozwalajaca na monitorowanie ilość dzieci w sali zabaw.',
+      en: 'Helps company owners to monitor how many toddlers are on their business premisses, and now much their paretns will pay for their time!',
     },
     title: {
       pl: 'Chata małolata',
       en: 'Child\'s play',
     },
     category: 'solo',
+    technologies: ['react', 'redux', 'electron', 'session storage']
   },
 
 
   {
-    image: 'placeholder.png',
+    image: 'skeletoon.png',
     description: {
       pl: '',
-      en: '',
+      en: 'A base for any application that uses modern backend, and provides basic api for user authorisation',
     },
     title: {
       pl: 'Skeletoon',
       en: 'Skeletoon',
     },
     category: 'solo',
+    technologies: ['graphql', 'react', 'apollo', 'docker', 'JSON webtoken']
   },
 
   {
