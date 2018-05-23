@@ -198,7 +198,7 @@ const projects = [
   },
 
   {
-    image: 'placeholder.png',
+    image: 'lyles-sutherland.png',
     description: {
       pl: '',
       en: '',
