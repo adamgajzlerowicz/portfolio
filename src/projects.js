@@ -84,6 +84,20 @@ const projects = [
   },
 
   {
+    image: 'placeholder.png',
+    description: {
+      pl: '',
+      en: 'An application that helps people to see how many pieces of tart there still are in the next room, making their lifes easier.',
+    },
+    title: {
+      pl: 'Gajzlerek',
+      en: 'Gajzlerek',
+    },
+    category: 'fun',
+    technologies: [],
+  },
+
+  {
     image: 'anotherdayanotherword.png',
     description: {
       pl: '',
@@ -170,16 +184,17 @@ const projects = [
   },
 
   {
-    image: 'placeholder.png',
+    image: 'wilson.png',
     description: {
       pl: '',
-      en: '',
+      en: 'A system that allows preorder of quality cathering hire to your wedding. You don\'t need pen and paper anymore! Just add items directly to your requested list!',
     },
     title: {
       pl: 'Wynajem akcesoriow weselnych Wilsona',
-      en: 'Wilson cater hire',
+      en: 'Wilson catering hire',
     },
     category: 'solo',
+    technologies: ['laravel', 'mysql', 'php-deployer']
   },
 
   {
@@ -193,7 +208,9 @@ const projects = [
       en: 'Lyles-Sutherland CRM',
     },
     category: 'solo',
+    technologies: ['symfony', 'e2e testing', 'react', 'mysql']
   },
+
   {
     image: 'placeholder.png',
     description: {
