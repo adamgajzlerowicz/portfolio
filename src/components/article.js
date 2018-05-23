@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Col, Modal, Button } from 'react-bootstrap';
 
-import translations from '../translations';
-
 class Article extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
@@ -32,9 +30,6 @@ class Article extends React.PureComponent {
       <div className="full-height">
         <article>
           <Modal show={this.state.show} onHide={this.handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
             <Modal.Body>
               <img src={imagePath} className="promo-image" alt={`logo ${title[language]}`} />
             </Modal.Body>
