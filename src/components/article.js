@@ -23,7 +23,6 @@ class Article extends React.PureComponent {
     this.setState({ show: true });
   }
 
-
   render() {
     const {
       image, description, title, language,
