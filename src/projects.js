@@ -30,47 +30,50 @@ const projects = [
     image: 'sme.png',
     description: {
       pl: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad deleniti temporibus libero pariatur, ratione, facere accusantium cumque vitae, nostrum at atque modi cum amet non, sit consequuntur enim! Maxime.',
-      en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas blanditiis itaque quaerat, dolore voluptatum, debitis laborum placeat voluptates! Eos reiciendis nulla esse expedita totam vero at quae ullam! Explicabo, soluta.',
+      en: 'A biggest property letting platform in Scotland. That allows management of assets and makes daily managing of companies much easier.',
     },
     title: {
       pl: 'SME Professional',
       en: 'SME Professional',
     },
     category: 'corporate',
+    technologies: ['php', 'silex', 'mysql', 'jquery']
   },
 
   {
     image: 'phg.png',
     description: {
       pl: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad deleniti temporibus libero pariatur, ratione, facere accusantium cumque vitae, nostrum at atque modi cum amet non, sit consequuntur enim! Maxime.',
-      en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas blanditiis itaque quaerat, dolore voluptatum, debitis laborum placeat voluptates! Eos reiciendis nulla esse expedita totam vero at quae ullam! Explicabo, soluta.',
+      en: 'A large scale affiliate market platform that allows product advertisers monitor their relation with partners, making management part of their businesses much easier.',
     },
     title: {
       pl: 'Performance Horizon',
       en: 'Performance Horizon',
     },
     category: 'corporate',
+    technologies: ['php', 'react', 'redux', 'mysql', 'redis', 'gitlab', 'REST', 'TDD']
   },
 
   {
     image: 'data_processor.png',
     description: {
       pl: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad deleniti temporibus libero pariatur, ratione, facere accusantium cumque vitae, nostrum at atque modi cum amet non, sit consequuntur enim! Maxime.',
-      en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas blanditiis itaque quaerat, dolore voluptatum, debitis laborum placeat voluptates! Eos reiciendis nulla esse expedita totam vero at quae ullam! Explicabo, soluta.',
+      en: 'An application that processes a hudge amouts of data, usitilising multiple processors.',
     },
     title: {
       pl: 'Procesor danych',
       en: 'Data processor',
     },
     category: 'corporate',
+    technologies: ['nodejs', 'mysql', 'unit testing']
   },
 
 
   {
-    image: 'placeholder.png',
+    image: 'czyjesttarta.png',
     description: {
       pl: '',
-      en: '',
+      en: 'An application that helps people to see how many pieces of tart there still are in the next room, making their lifes easier.',
     },
     title: {
       pl: 'Czy jest tarta',
