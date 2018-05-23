@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint src --ext .js --cache --fix"
+    "lint": "eslint src --ext .js --cache --fix",
+    "push": "git add .; git commit -m 'push'; git push; yarn deploy"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",

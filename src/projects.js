@@ -80,10 +80,11 @@ const projects = [
       en: 'Is there tart',
     },
     category: 'fun',
+    technologies: ['react', 'redux', 'websocket'],
   },
 
   {
-    image: 'placeholder.png',
+    image: 'anotherdayanotherword.png',
     description: {
       pl: '',
       en: 'A Google Chrome plugin that uses Thesaurus for finding synonymes for selected words and replaces them on any website you enter.',
@@ -93,47 +94,49 @@ const projects = [
       en: 'Another day another word',
     },
     category: 'fun',
+    technologies: ['javascript', 'material-design', 'api', 'chrome-extension']
   },
 
-
-
   {
-    image: 'placeholder.png',
+    image: 'react-select.png',
     description: {
       pl: '',
-      en: '',
+      en: 'Library that provides searchable dropdown that allows hot options replacement. It made life of many people easier.',
     },
     title: {
       pl: 'React Select',
       en: 'React Select',
     },
     category: 'plugin',
+    technologies: ['react', 'redux', 'webpack']
   },
 
   {
-    image: 'placeholder.png',
+    image: 'react-infini-grid.png',
     description: {
       pl: '',
-      en: '',
+      en: 'Libary which generates grid, alowing to display hundreds of tousends of items on one screen without pagination, showing only ones that are in a viewport. This makes developer\'s life so much easier!',
     },
     title: {
       pl: 'React Infini Grid',
       en: 'React Infini Grid',
     },
     category: 'plugin',
+    technologies: ['react', 'redux', 'responsive design', 'flexbox']
   },
 
   {
-    image: 'placeholder.png',
+    image: 'muter.png',
     description: {
-      pl: '',
-      en: '',
+      pl: 'Wtyczka ściszająca reklamy na youtube.',
+      en: 'Mute annoying youtube commercials with a chrome plugin. You don\'t need adblock anymore and advertisers still get their money!',
     },
     title: {
-      pl: 'Wtyczka ściszająca reklamy na youtube',
-      en: 'Youtube muter chrome plugin',
+      pl: 'Youtube muter',
+      en: 'Youtube muter',
     },
     category: 'plugin',
+    technologies:['vanilla javascript', 'chrome-extension']
   },
 
 
