@@ -1,13 +1,18 @@
 {
   "main.css": "static/css/main.89af992a.css",
   "main.css.map": "static/css/main.89af992a.css.map",
-  "main.js": "static/js/main.a08ac3ab.js",
-  "main.js.map": "static/js/main.a08ac3ab.js.map",
+  "main.js": "static/js/main.52b5e839.js",
+  "main.js.map": "static/js/main.52b5e839.js.map",
+  "static/media/anotherdayanotherword.png": "static/media/anotherdayanotherword.c22552e6.png",
   "static/media/avatar.jpg": "static/media/avatar.a8fe4761.jpg",
+  "static/media/chata-malolata.png": "static/media/chata-malolata.23306430.png",
   "static/media/czyjesttarta.png": "static/media/czyjesttarta.a7383000.png",
   "static/media/data_processor.png": "static/media/data_processor.217519a3.png",
   "static/media/docstore.png": "static/media/docstore.2dcaf702.png",
   "static/media/looking-up.jpg": "static/media/looking-up.9751bc98.jpg",
+  "static/media/muter.png": "static/media/muter.64220c78.png",
   "static/media/phg.png": "static/media/phg.a347007d.png",
+  "static/media/react-infini-grid.png": "static/media/react-infini-grid.bb8d2334.png",
+  "static/media/react-select.png": "static/media/react-select.73890608.png",
   "static/media/sme.png": "static/media/sme.7c4eaf30.png"
 }
