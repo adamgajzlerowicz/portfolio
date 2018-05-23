@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.89af992a.css",
   "main.css.map": "static/css/main.89af992a.css.map",
-  "main.js": "static/js/main.52b5e839.js",
-  "main.js.map": "static/js/main.52b5e839.js.map",
+  "main.js": "static/js/main.3548abb1.js",
+  "main.js.map": "static/js/main.3548abb1.js.map",
   "static/media/anotherdayanotherword.png": "static/media/anotherdayanotherword.c22552e6.png",
   "static/media/avatar.jpg": "static/media/avatar.a8fe4761.jpg",
   "static/media/chata-malolata.png": "static/media/chata-malolata.23306430.png",
@@ -14,5 +14,6 @@
   "static/media/phg.png": "static/media/phg.a347007d.png",
   "static/media/react-infini-grid.png": "static/media/react-infini-grid.bb8d2334.png",
   "static/media/react-select.png": "static/media/react-select.73890608.png",
+  "static/media/skeletoon.png": "static/media/skeletoon.977919ad.png",
   "static/media/sme.png": "static/media/sme.7c4eaf30.png"
 }
