@@ -63,7 +63,7 @@ class Home extends Component {
           </section>
 
           <section id="portfolio" className={`section-${getClassName(index++)}`}>
-            <div className="col-sm-6 col-sm-push-3 col-xs-12">
+            <div className="center width">
               <h1 className="section-heading">{t.pastProjects[language]}</h1>
 
               <nav>

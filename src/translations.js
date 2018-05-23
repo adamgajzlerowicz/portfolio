@@ -49,7 +49,7 @@ const t = {
     en: 'solo',
   },
   all: {
-    pl: 'Wyczyść',
+    pl: 'Wszystkie',
     en: 'all',
   },
   tags: {

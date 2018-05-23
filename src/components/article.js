@@ -26,7 +26,7 @@ class Article extends React.PureComponent {
 
   render() {
     const {
-      image, description, title, category, language,
+      image, description, title, language,
     } = this.props;
     const imagePath = require(`../images/${image}`);
     return (
