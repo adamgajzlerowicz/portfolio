@@ -38,14 +38,14 @@ const t = {
   },
   corporate: {
     pl: 'Duże projekty',
-    en: 'corporate & colaboration',
+    en: 'corporate',
   },
   plugins: {
     pl: 'Wtyczki',
     en: 'plugins',
   },
   solo: {
-    pl: 'Projekty solo',
+    pl: 'solo',
     en: 'solo',
   },
   all: {

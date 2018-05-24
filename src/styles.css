@@ -102,6 +102,7 @@ body {
     display: inline-block;
     width: 100%;
     background-color: #1F2834;
+    position: relative;
 }
 
 .section-dark article {
@@ -208,12 +209,13 @@ p {
 }
 
 #portfolio nav button {
+    float: right;
     background: transparent;
     outline: none;
     color: #ACADAE;
     border: none;
     Font-Family: 'Montserrat', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 #portfolio nav button.active {
@@ -221,12 +223,7 @@ p {
 }
 
 #portfolio nav {
-    width: 100%;
-    padding: 10px;
     color: white;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 /* fonts */
@@ -290,6 +287,15 @@ p {
 
     article {
       margin: 50px auto;
+    }
+
+    #portfolio nav {
+        float: left;
+        transform: rotate(-90deg);
+       margin-top: 292px;
+       margin-left: -278px;
+       position: absolute;
+       width: 500px;
     }
 
 }

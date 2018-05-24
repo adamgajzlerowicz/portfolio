@@ -107,7 +107,7 @@ class Home extends Component {
             </div>
 
           </section>
-        <Up onClick={()=>scrollToView('portfolio')} className="up" />
+          <Up onClick={() => scrollToView('portfolio')} className="up" />
 
         </main>
         <footer>
