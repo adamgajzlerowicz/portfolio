@@ -26,25 +26,12 @@
   */
 
 const projects = [
-  {
-    image: 'sme.png',
-    description: {
-      pl: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad deleniti temporibus libero pariatur, ratione, facere accusantium cumque vitae, nostrum at atque modi cum amet non, sit consequuntur enim! Maxime.',
-      en: 'A biggest property letting platform in Scotland. That allows management of assets and makes daily managing of companies much easier.',
-    },
-    title: {
-      pl: 'SME Professional',
-      en: 'SME Professional',
-    },
-    category: 'corporate',
-    technologies: ['php', 'silex', 'mysql', 'jquery'],
-  },
 
   {
     image: 'phg.png',
     description: {
-      pl: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad deleniti temporibus libero pariatur, ratione, facere accusantium cumque vitae, nostrum at atque modi cum amet non, sit consequuntur enim! Maxime.',
-      en: 'A large scale affiliate market platform that allows product advertisers monitor their relation with partners, making management part of their businesses much easier.',
+      pl: 'Dla świata - dominuąca firma na rynku afiliacyjnym. Dla mnia - PHP wielkiej skali.',
+      en: 'A large scale affiliate market platform that allows product advertisers to monitor their partners and maintain the relationship.',
     },
     title: {
       pl: 'Performance Horizon',
@@ -55,38 +42,53 @@ const projects = [
   },
 
   {
+    image: 'sme.png',
+    description: {
+      pl: 'Największa w Szkocji platforma do zarządzania biurami nieruchmości. Gigantyczna aplikacja do przechowywania danych dotyczących najemców, wynajmuących oraz danych finansowych.',
+      en: 'A biggest property letting platform in Scotland. It allows management of company assets and storing data about tenants and many, many more',
+    },
+    title: {
+      pl: 'SME Professional',
+      en: 'SME Professional',
+    },
+    category: 'corporate',
+    technologies: ['php', 'silex', 'mysql', 'jquery'],
+  },
+
+
+  {
     image: 'data_processor.png',
     description: {
-      pl: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad deleniti temporibus libero pariatur, ratione, facere accusantium cumque vitae, nostrum at atque modi cum amet non, sit consequuntur enim! Maxime.',
-      en: 'An application that processes a hudge amouts of data, usitilising multiple processors.',
+      pl: 'Aplikacja przetwarzająca miliony krotek dziennie, weryfikując ich popranowc poprzez kontaktowanie się z zewnętrzym API.',
+      en: 'An application that processes a huge amount of data, utilizing multiple processor cores, and verifying its integrity using external API',
     },
     title: {
       pl: 'Procesor danych',
       en: 'Data processor',
     },
     category: 'corporate',
-    technologies: ['nodejs', 'mysql', 'unit testing'],
+    technologies: ['nodejs', 'mysql', 'unit testing', 'API'],
   },
 
 
   {
     image: 'czyjesttarta.png',
     description: {
-      pl: '',
-      en: 'An application that helps people to see how many pieces of tart there still are in the next room, making their lifes easier.',
+      pl: 'Strona internetowa do sprawdzania ile kawałków zostało do zjedzenia w pokoju obok :)',
+      en: 'A website for checking how many pieces of tart are still on the table... In the next room :)',
     },
     title: {
       pl: 'Czy jest tarta',
       en: 'Is there tart',
     },
     category: 'fun',
-    technologies: ['react', 'redux', 'websocket'],
+    technologies: ['react', 'redux', 'websocket', 'real time'],
   },
 
   {
     image: 'gajzlerek.png',
     description: {
-      pl: '',
+      pl: 'Aplikacja na telefon Android, ulatwiający wysyłanie wiadomości sms na wybrany numer, oraz monitorowanie raportów ich doręcznia.',
       en: 'Android app that sends easily text messages to a particular number and allows for precise tracking of which messages were delivered or not.',
     },
     title: {
@@ -100,7 +102,7 @@ const projects = [
   {
     image: 'anotherdayanotherword.png',
     description: {
-      pl: '',
+      pl: 'Plugin do przeglądarki Chrome pomagający w nauce języka angielskieo poprzez podmianę wybranych wyrazów na ich synonimy, przez co wyraz którego chcemy się naucyczć będzie się pojawiać cześciej w tekście.',
       en: 'A Google Chrome plugin that uses Thesaurus for finding synonyms for selected words and replaces them on any website you enter.',
     },
     title: {
@@ -114,7 +116,7 @@ const projects = [
   {
     image: 'react-select.png',
     description: {
-      pl: '',
+      pl: 'Biblioteka do React udostępniająca komponent Dropdown, wspierający wyszkukiwanie oraz nawigację klawiszami.',
       en: 'Library that provides searchable dropdown that allows hot options replacement. It made life of many people easier.',
     },
     title: {
@@ -128,8 +130,8 @@ const projects = [
   {
     image: 'react-infini-grid.png',
     description: {
-      pl: '',
-      en: 'Libary which generates grid, alowing to display hundreds of tousends of items on one screen without pagination, showing only ones that are in a viewport. This makes developer\'s life so much easier!',
+      pl: 'Biblioteka generuąca listę bardzo dużą liste elementów w jednym widoku, przy czym wszystkie niewidoczne elementy zostają usunięte w niewidoczny dla użytkownika sposób.',
+      en: 'Library which generates grid, allowing to display hundreds of thousands of items on one screen without pagination, showing only ones that are in a viewport. This makes developer\'s life so much easier!',
     },
     title: {
       pl: 'React Infini Grid',
@@ -157,7 +159,7 @@ const projects = [
   {
     image: 'chata-malolata.png',
     description: {
-      pl: 'Aplikacja pozwalajaca na monitorowanie ilość dzieci w sali zabaw.',
+      pl: 'Desktopowa aplikacja pozwalajaca na monitorowanie ilość dzieci w sali zabaw.',
       en: 'Helps company owners to monitor how many toddlers are on their business premisses, and now much their paretns will pay for their time!',
     },
     title: {
@@ -173,7 +175,7 @@ const projects = [
     image: 'skeletoon.png',
     description: {
       pl: '',
-      en: 'A base for any application that uses modern backend, and provides basic api for user authorisation',
+      en: 'A base for any application that uses modern backend, and provides basic api for user authorization',
     },
     title: {
       pl: 'Skeletoon',
