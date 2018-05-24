@@ -23,7 +23,7 @@ class Article extends React.PureComponent {
 
   render() {
     const {
-      image, description, title, language,
+      image, description, title, language, technologies
     } = this.props;
 
     // eslint-disable-next-line
@@ -35,7 +35,7 @@ class Article extends React.PureComponent {
         <article>
           { isWide && (
           <Modal show={this.state.show} onHide={this.handleClose}>
-            <img src={imagePath} className="promo-image" alt={`logo ${title[language]}`} />
+            <img src={imagePath} className="promo-image-modal" alt={`logo ${title[language]}`} />
           </Modal>
           )}
 
@@ -51,6 +51,7 @@ class Article extends React.PureComponent {
           <Col xs={12} sm={8}>
             <h2 className="article-heading">{title[language]}</h2>
             <p className="article-content">{description[language]}</p>
+            <p className="tags">{technologies.map( t => <span key={Math.random()}> {t} </span>) }</p>
           </Col>
           <Col xs={12}> <hr /> </Col>
         </article>

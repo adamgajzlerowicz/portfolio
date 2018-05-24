@@ -222,6 +222,7 @@ const projects = [
       en: 'New Future Me document database',
     },
     category: 'solo',
+    technologies: ['laravel', 'mysql', 'migrations']
   },
 
 ];

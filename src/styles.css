@@ -61,9 +61,15 @@ body {
 }
 
 .promo-image {
-  max-width: 100%;
+  max-width: 400px;
   margin: 0 auto;
+  max-height: 300px;
+  width: 100%;
   display: block;
+}
+
+.promo-image-modal {
+    max-width: 100%;
 }
 
 .section-dark .section-heading {
@@ -223,7 +229,12 @@ p {
 }
 
 #portfolio nav {
-    color: white;
+    float: left;
+    transform: rotate(-90deg);
+    margin-top: 292px;
+    margin-left: -278px;
+    position: absolute;
+    width: 500px;
 }
 
 /* fonts */
@@ -289,18 +300,15 @@ p {
       margin: 50px auto;
     }
 
-    #portfolio nav {
-        float: left;
-        transform: rotate(-90deg);
-       margin-top: 292px;
-       margin-left: -278px;
-       position: absolute;
-       width: 500px;
-    }
+
 
 }
 
 @media all and (max-width:767px) {
+
+    #portfolio nav {
+        display: none;
+    }
 
     .app-header, #what-i-do {
         padding: 7vh 10px 10vh;
