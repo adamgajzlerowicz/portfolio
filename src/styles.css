@@ -45,6 +45,15 @@ body {
     transform: scale(1.1);
 }
 
+.up {
+    color: #00FFF4;
+    /*position: absolute;*/
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    margin: 20px;
+}
+
 .container {
     padding: 0;
     margin: 0 auto;
@@ -263,8 +272,13 @@ p {
     opacity: 0.8;
 }
 
+.modal-content {
+    background: #1F2834;
+}
+
 .modal-dialog {
     max-width: 1000px;
+    width: 800px;
     padding: 20px;
 }
 

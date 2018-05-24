@@ -25,19 +25,28 @@ class Article extends React.PureComponent {
     const {
       image, description, title, language,
     } = this.props;
+
+    // eslint-disable-next-line
+    const isWide = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 768;
+
     const imagePath = require(`../images/${image}`);
     return (
       <div className="full-height">
         <article>
+          { isWide && (
           <Modal show={this.state.show} onHide={this.handleClose}>
-            <Modal.Body>
-              <img src={imagePath} className="promo-image" alt={`logo ${title[language]}`} />
-            </Modal.Body>
+            <img src={imagePath} className="promo-image" alt={`logo ${title[language]}`} />
           </Modal>
+          )}
+
           <Col xs={12} sm={4}>
-            <Button bsStyle="link" onClick={this.handleShow} className="open-item">
-              <img src={imagePath} className="promo-image" alt="logo" />
-            </Button>
+            { isWide && (
+              <Button bsStyle="link" onClick={this.handleShow} className="open-item">
+                <img src={imagePath} className="promo-image" alt="logo" />
+              </Button>
+              )}
+            { !isWide && <img src={imagePath} className="promo-image" alt="logo" />}
+
           </Col>
           <Col xs={12} sm={8}>
             <h2 className="article-heading">{title[language]}</h2>

@@ -8,6 +8,7 @@ import LinkedIn from 'react-icons/lib/fa/linkedin';
 import Github from 'react-icons/lib/fa/github';
 import Email from 'react-icons/lib/fa/envelope';
 import Down from 'react-icons/lib/fa/angle-down';
+import Up from 'react-icons/lib/fa/caret-up';
 import { Col } from 'react-bootstrap';
 import Flag from 'react-world-flags';
 import FlipMove from 'react-flip-move';
@@ -35,7 +36,6 @@ class Home extends Component {
 
     return (
       <div className="app">
-
         <div
           onClick={() => {
             this.setState({ language: otherLangage });
@@ -104,10 +104,10 @@ class Home extends Component {
                   .map(article => <Article key={article.title.pl} {...article} language={language} />)
                 }
               </FlipMove>
-
             </div>
 
           </section>
+        <Up onClick={()=>scrollToView('portfolio')} className="up" />
 
         </main>
         <footer>

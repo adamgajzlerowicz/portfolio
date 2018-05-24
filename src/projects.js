@@ -37,7 +37,7 @@ const projects = [
       en: 'SME Professional',
     },
     category: 'corporate',
-    technologies: ['php', 'silex', 'mysql', 'jquery']
+    technologies: ['php', 'silex', 'mysql', 'jquery'],
   },
 
   {
@@ -51,7 +51,7 @@ const projects = [
       en: 'Performance Horizon',
     },
     category: 'corporate',
-    technologies: ['php', 'react', 'redux', 'mysql', 'redis', 'gitlab', 'REST', 'TDD']
+    technologies: ['php', 'react', 'redux', 'mysql', 'redis', 'gitlab', 'REST', 'TDD'],
   },
 
   {
@@ -65,7 +65,7 @@ const projects = [
       en: 'Data processor',
     },
     category: 'corporate',
-    technologies: ['nodejs', 'mysql', 'unit testing']
+    technologies: ['nodejs', 'mysql', 'unit testing'],
   },
 
 
@@ -84,31 +84,31 @@ const projects = [
   },
 
   {
-    image: 'placeholder.png',
+    image: 'gajzlerek.png',
     description: {
       pl: '',
-      en: 'An application that helps people to see how many pieces of tart there still are in the next room, making their lifes easier.',
+      en: 'Android app that sends easily text messages to a particular number and allows for precise tracking of which messages were delivered or not.',
     },
     title: {
       pl: 'Gajzlerek',
       en: 'Gajzlerek',
     },
     category: 'fun',
-    technologies: [],
+    technologies: ['react-native', 'session-storage', 'native-modules'],
   },
 
   {
     image: 'anotherdayanotherword.png',
     description: {
       pl: '',
-      en: 'A Google Chrome plugin that uses Thesaurus for finding synonymes for selected words and replaces them on any website you enter.',
+      en: 'A Google Chrome plugin that uses Thesaurus for finding synonyms for selected words and replaces them on any website you enter.',
     },
     title: {
       pl: 'Another day another word',
       en: 'Another day another word',
     },
     category: 'fun',
-    technologies: ['javascript', 'material-design', 'api', 'chrome-extension']
+    technologies: ['javascript', 'material-design', 'api', 'chrome-extension'],
   },
 
   {
@@ -122,7 +122,7 @@ const projects = [
       en: 'React Select',
     },
     category: 'plugin',
-    technologies: ['react', 'redux', 'webpack']
+    technologies: ['react', 'redux', 'webpack'],
   },
 
   {
@@ -136,7 +136,7 @@ const projects = [
       en: 'React Infini Grid',
     },
     category: 'plugin',
-    technologies: ['react', 'redux', 'responsive design', 'flexbox']
+    technologies: ['react', 'redux', 'responsive design', 'flexbox'],
   },
 
   {
@@ -150,7 +150,7 @@ const projects = [
       en: 'Youtube muter',
     },
     category: 'plugin',
-    technologies:['vanilla javascript', 'chrome-extension']
+    technologies: ['vanilla javascript', 'chrome-extension'],
   },
 
 
@@ -165,7 +165,7 @@ const projects = [
       en: 'Child\'s play',
     },
     category: 'solo',
-    technologies: ['react', 'redux', 'electron', 'session storage']
+    technologies: ['react', 'redux', 'electron', 'session storage'],
   },
 
 
@@ -180,7 +180,7 @@ const projects = [
       en: 'Skeletoon',
     },
     category: 'solo',
-    technologies: ['graphql', 'react', 'apollo', 'docker', 'JSON webtoken']
+    technologies: ['graphql', 'react', 'apollo', 'docker', 'JSON webtoken'],
   },
 
   {
@@ -194,7 +194,7 @@ const projects = [
       en: 'Wilson catering hire',
     },
     category: 'solo',
-    technologies: ['laravel', 'mysql', 'php-deployer']
+    technologies: ['laravel', 'mysql', 'php-deployer'],
   },
 
   {
@@ -208,11 +208,11 @@ const projects = [
       en: 'Lyles-Sutherland CRM',
     },
     category: 'solo',
-    technologies: ['symfony', 'e2e testing', 'react', 'mysql']
+    technologies: ['symfony', 'e2e testing', 'react', 'mysql'],
   },
 
   {
-    image: 'placeholder.png',
+    image: 'docstore.png',
     description: {
       pl: '',
       en: '',
