@@ -23,7 +23,7 @@ class Article extends React.PureComponent {
 
   render() {
     const {
-      image, description, title, language, technologies
+      image, description, title, language, technologies,
     } = this.props;
 
     // eslint-disable-next-line

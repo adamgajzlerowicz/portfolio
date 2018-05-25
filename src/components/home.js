@@ -119,12 +119,12 @@ class Home extends Component {
           <Col sm={4} xs={12}> © {new Date().getFullYear()} Adam Gajzlerowicz </Col>
 
           <Col sm={8} xs={12} className="footer-social">
-            <a href="https://twitter.com/nelf86"><Twitter /></a>
-            <a href="https://steamcommunity.com/id/entity02"><Steam /></a>
-            <a href="https://www.linkedin.com/in/adam-gajzlerowicz-26311934"><LinkedIn /></a>
-            <a href="https://github.com/adamgajzlerowicz"><Github /></a>
-            <a href="https://stackoverflow.com/users/1333744/adam"><StackOverflow /></a>
-            <a href="mailto:nelf86@gmail.com"><Email /></a>
+            <a href="https://twitter.com/nelf86" ><Twitter alt="see me on twitter" /></a>
+            <a href="https://steamcommunity.com/id/entity02"><Steam alt="see me on steam" /></a>
+            <a href="https://www.linkedin.com/in/adam-gajzlerowicz-26311934"><LinkedIn alt="see me on linkedin" /></a>
+            <a href="https://github.com/adamgajzlerowicz"><Github alt="see me on github" /></a>
+            <a href="https://stackoverflow.com/users/1333744/adam"><StackOverflow alt="see me on stack overflow" /></a>
+            <a href="mailto:nelf86@gmail.com"><Email alt="send me an email" /></a>
           </Col>
 
         </footer>
