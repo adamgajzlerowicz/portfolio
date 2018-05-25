@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Col, Modal, Button } from 'react-bootstrap';
+import t from '../translations';
+import LazyLoad from 'react-lazyload';
 
 class Article extends React.PureComponent {
   constructor(props, context) {
@@ -30,30 +32,28 @@ class Article extends React.PureComponent {
     const isWide = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 768;
 
     const imagePath = require(`../images/${image}`);
+
+    const ImageComponent = ({ addition = '' }) => (
+      <LazyLoad>
+        <img src={imagePath} className={`promo-image${addition}`} alt={`logo ${title[language]}`} />
+      </LazyLoad>
+    );
+
     return (
-      <div className="full-height">
+      <div className="full-height full-screen">
         <article>
-          { isWide && (
-          <Modal show={this.state.show} onHide={this.handleClose}>
-            <img src={imagePath} className="promo-image-modal" alt={`logo ${title[language]}`} />
-          </Modal>
-          )}
+          { isWide && (<Modal show={this.state.show} onHide={this.handleClose}> <ImageComponent addition="-modal" /> </Modal>)}
 
           <Col xs={12} sm={4}>
-            { isWide && (
-              <Button bsStyle="link" onClick={this.handleShow} className="open-item">
-                <img src={imagePath} className="promo-image" alt="logo" />
-              </Button>
-              )}
-            { !isWide && <img src={imagePath} className="promo-image" alt="logo" />}
+            { isWide && (<Button bsStyle="link" onClick={this.handleShow} className="open-item"> <ImageComponent /> </Button>)}
+            { !isWide && <ImageComponent /> }
 
           </Col>
           <Col xs={12} sm={8}>
             <h2 className="article-heading">{title[language]}</h2>
             <p className="article-content">{description[language]}</p>
-            <p className="tags">{technologies.map(t => <span key={Math.random()}> {t} </span>) }</p>
+            <p className="tags">{t.tags[language]}: {technologies.map(tech => <span key={Math.random()}> {tech} </span>) }</p>
           </Col>
-          <Col xs={12}> <hr /> </Col>
         </article>
       </div>
     );

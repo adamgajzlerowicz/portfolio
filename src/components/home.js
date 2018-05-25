@@ -43,7 +43,7 @@ class Home extends Component {
           }}
           className="language"
         >
-          <Flag code={otherLangage === 'pl' ? 'pl' : 'gb'} height="16" />
+          <Flag code={otherLangage === 'pl' ? 'pl' : 'gb'} height="16" alt="change display language" />
         </div>
 
         <header className="app-header">
@@ -111,8 +111,8 @@ class Home extends Component {
               </FlipMove>
             </div>
 
+            <Up onClick={() => scrollToView('portfolio')} className="up" />
           </section>
-          <Up onClick={() => scrollToView('portfolio')} className="up" />
 
         </main>
         <footer>

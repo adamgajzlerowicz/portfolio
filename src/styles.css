@@ -89,8 +89,11 @@ body {
 }
 
 .tags {
+    color: #23527c;
     font-size: 12px;
     margin-top: 30px;
+}
+.tags span {
     color: #C5C6C8;
 }
 
@@ -121,12 +124,12 @@ body {
 }
 
 hr {
- display: block;
- height: 1px;
- border: 0;
- border-top: 1px solid #00FFF6;
- margin: 6em 0;
- padding: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+
+    margin: 6em 0;
+    padding: 0;
 }
 
 .footer-social {
@@ -288,6 +291,19 @@ p {
 
 @media all and (max-width:767px) {
 
+    * {
+        text-align: center;
+    }
+
+    .full-screen {
+       border-bottom: 1px solid #00FFF6;
+       height: 100vh;
+    }
+
+    .article-heading {
+        margin-top: 30px;
+    }
+
     #portfolio nav {
         display: none;
     }
@@ -330,6 +346,10 @@ p {
     .footer-social {
         justify-content: center;
         margin-top: 40px;
+    }
+
+    .promo-image {
+        width: auto;
     }
 
 }
