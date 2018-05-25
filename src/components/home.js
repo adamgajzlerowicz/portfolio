@@ -68,34 +68,39 @@ class Home extends Component {
 
               <nav>
                 <button
+                  onClick={() => this.setState({ filter: null })}
+                  className={filter === null ? 'active' : ''}
+                > {t.all[language]}
+                </button>
+
+                <button
                   onClick={() => this.setState({ filter: 'fun' })}
                   className={filter === 'fun' ? 'active' : ''}
                 >
                   {t.fun[language]}
                 </button>
+
                 <button
                   onClick={() => this.setState({ filter: 'corporate' })}
                   className={filter === 'corporate' ? 'active' : ''}
                 >
                   {t.corporate[language]}
                 </button>
+
                 <button
                   onClick={() => this.setState({ filter: 'plugin' })}
                   className={filter === 'plugin' ? 'active' : ''}
                 >
                   {t.plugins[language]}
                 </button>
+
                 <button
                   onClick={() => this.setState({ filter: 'solo' })}
                   className={filter === 'solo' ? 'active' : ''}
                 >
                   {t.solo[language]}
                 </button>
-                <button
-                  onClick={() => this.setState({ filter: null })}
-                  className={filter === null ? 'active' : ''}
-                > {t.all[language]}
-                </button>
+
               </nav>
 
               <FlipMove>

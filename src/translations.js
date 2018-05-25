@@ -34,23 +34,23 @@ const t = {
   },
   fun: {
     pl: 'Dla przyjemności',
-    en: 'fun',
+    en: 'Fun',
   },
   corporate: {
     pl: 'Duże projekty',
-    en: 'corporate',
+    en: 'Corporate',
   },
   plugins: {
     pl: 'Wtyczki',
-    en: 'plugins',
+    en: 'Plugins',
   },
   solo: {
-    pl: 'solo',
-    en: 'solo',
+    pl: 'Solo',
+    en: 'Solo',
   },
   all: {
     pl: 'Wszystkie',
-    en: 'all',
+    en: 'All',
   },
   tags: {
     pl: 'Tagi',

@@ -232,32 +232,11 @@ p {
     float: left;
     transform: rotate(-90deg);
     margin-top: 292px;
-    margin-left: -278px;
+    margin-left: -300px;
     position: absolute;
     width: 500px;
 }
 
-/* fonts */
-
-h1 {
-    Font-Family: 'Montserrat', sans-serif;
-  Font-Size: 48px;
-}
-
-h2 {
-    Font-Family: 'Montserrat', sans-serif;
-    Font-Size: 30px;
-}
-
-h3 {
-    Font-Family: 'Montserrat', sans-serif;
-    Font-Size: 20px;
-}
-
-p {
- Font-Family: 'Lora', Serif;
- Font-Size: 14px;
-}
 
 .width {
    max-width: 640px;
@@ -352,3 +331,24 @@ p {
 
 }
 
+/* fonts */
+
+h1 {
+    Font-Family: 'Montserrat', sans-serif;
+  Font-Size: 48px;
+}
+
+h2 {
+    Font-Family: 'Montserrat', sans-serif;
+    Font-Size: 30px;
+}
+
+h3 {
+    Font-Family: 'Montserrat', sans-serif;
+    Font-Size: 20px;
+}
+
+p {
+ Font-Family: 'Lora', Serif;
+ Font-Size: 14px;
+}
