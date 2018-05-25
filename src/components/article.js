@@ -51,7 +51,7 @@ class Article extends React.PureComponent {
           <Col xs={12} sm={8}>
             <h2 className="article-heading">{title[language]}</h2>
             <p className="article-content">{description[language]}</p>
-            <p className="tags">{technologies.map( t => <span key={Math.random()}> {t} </span>) }</p>
+            <p className="tags">{technologies.map(t => <span key={Math.random()}> {t} </span>) }</p>
           </Col>
           <Col xs={12}> <hr /> </Col>
         </article>

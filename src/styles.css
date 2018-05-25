@@ -86,7 +86,15 @@ body {
 }
 
 .article-heading {
+    margin-top: 0;
+    margin-bottom: 22px;
     color: #00FFF4;
+}
+
+.tags {
+    font-size: 12px;
+    margin-top: 30px;
+    color: #C5C6C8;
 }
 
 .section-dark .article-content {
@@ -272,7 +280,7 @@ p {
 @media all and (min-width:768px) {
 
     #portfolio .section-heading {
-        padding: 2em 0;
+        padding: 60px 0;
     }
 
     article {
@@ -340,7 +348,7 @@ h1 {
 
 h2 {
     Font-Family: 'Montserrat', sans-serif;
-    Font-Size: 30px;
+    Font-Size: 32px;
 }
 
 h3 {
@@ -349,6 +357,6 @@ h3 {
 }
 
 p {
- Font-Family: 'Lora', Serif;
- Font-Size: 14px;
+ Font-Family: 'Montserrat', Serif;
+ Font-Size: 18px;
 }
