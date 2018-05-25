@@ -8,7 +8,7 @@ import LinkedIn from 'react-icons/lib/fa/linkedin';
 import Github from 'react-icons/lib/fa/github';
 import Email from 'react-icons/lib/fa/envelope';
 import Down from 'react-icons/lib/fa/angle-down';
-import Up from 'react-icons/lib/fa/caret-up';
+import Up from 'react-icons/lib/fa/angle-up';
 import { Col } from 'react-bootstrap';
 import Flag from 'react-world-flags';
 import FlipMove from 'react-flip-move';

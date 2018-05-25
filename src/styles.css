@@ -47,10 +47,7 @@ body {
 
 .up {
     color: #00FFF4;
-    /*position: absolute;*/
-    bottom: 20px;
-    right: 20px;
-    font-size: 30px;
+    font-size: 100px;
     margin: 20px;
 }
 
