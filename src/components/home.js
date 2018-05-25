@@ -50,7 +50,7 @@ class Home extends Component {
           <div id="avatar" />
           <h1 className="app-title">Adam Gajzlerowicz</h1>
           <h2 className="app-sub-title">{t.jobTitle[this.state.language]}</h2>
-          <button onClick={() => scrollToView('what-i-do')} className="down"><Down /></button>
+          <button onClick={() => scrollToView('what-i-do')} className="down"><Down alt="go to what i do section" /></button>
         </header>
 
         <main className="container">
@@ -59,7 +59,7 @@ class Home extends Component {
             <h1 className="section-heading flex">{t.whatIDo[language]}</h1>
             <h3 className="center-text center width flex">{t.whatICreate[language]}</h3>
             <h3 className="center-text center width flex"> {t.motivation[language]} </h3>
-            <button onClick={() => scrollToView('portfolio')} className="down"><Down /></button>
+            <button onClick={() => scrollToView('portfolio')} className="down"><Down alt="go to my portfolio" /></button>
           </section>
 
           <section id="portfolio" className={`section-${getClassName(index++)}`}>
