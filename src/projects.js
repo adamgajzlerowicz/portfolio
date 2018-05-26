@@ -144,7 +144,7 @@ const projects = [
   {
     image: 'muter.jpeg',
     description: {
-      pl: 'Wtyczka ściszająca reklamy na youtube.',
+      pl: 'Wtyczka ściszająca reklamy na youtube. Jest to alternatywa dla adblocka, gdzie reklamy sa wyswietlane, lecz bez dzwięku.',
       en: 'Mute annoying youtube commercials with a chrome plugin. You don\'t need adblock anymore and advertisers still get their money!',
     },
     title: {

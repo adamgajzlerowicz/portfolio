@@ -1,7 +1,7 @@
 import * as React from 'react';
+import LazyLoad from 'react-lazyload';
 import { Col, Modal, Button } from 'react-bootstrap';
 import t from '../translations';
-import LazyLoad from 'react-lazyload';
 
 class Article extends React.PureComponent {
   constructor(props, context) {
