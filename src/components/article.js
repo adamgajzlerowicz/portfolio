@@ -1,3 +1,4 @@
+/* global window */
 import * as React from 'react';
 import LazyLoad from 'react-lazyload';
 import { Col, Modal, Button } from 'react-bootstrap';
@@ -9,10 +10,21 @@ class Article extends React.PureComponent {
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
 
     this.state = {
       show: false,
     };
+  }
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+  }
+
+  updateDimensions() {
+    this.forceUpdate();
   }
 
   handleClose() {

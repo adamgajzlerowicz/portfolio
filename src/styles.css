@@ -38,6 +38,7 @@ body {
     outline:none;
     border: none;
     max-height: 230px;
+    width: 114px;
 }
 
 .down:hover {
@@ -101,7 +102,6 @@ body {
 }
 
 .section-dark {
-    min-height: 100vh;
     padding-bottom: 50px;
     display: inline-block;
     width: 100%;
@@ -170,6 +170,11 @@ footer {
 
 
 .full-height {
+    height: 100%;
+    float: left;
+}
+
+.full-width {
     width: 100%;
     float: left;
 }
@@ -270,6 +275,14 @@ p {
 .full-screen {
     border-bottom: 1px solid #00FFF6;
 }
+
+.up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 @media all and (min-width:768px) {
 
