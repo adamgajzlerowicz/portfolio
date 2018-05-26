@@ -57,13 +57,7 @@ body {
     width: 100%;
 }
 
-.promo-image {
-  max-width: 400px;
-  margin: 0 auto;
-  max-height: 300px;
-  width: 100%;
-  display: block;
-}
+
 
 .promo-image-modal {
     max-width: 100%;
@@ -71,7 +65,6 @@ body {
 
 .section-dark .section-heading {
     text-align: center;
-    padding: 20px;
     color: white;
 }
 
@@ -79,20 +72,17 @@ body {
 .section-light .section-heading {
     color: black;
     text-align: center;
-    padding: 20px;
 }
 
 .article-heading {
-    margin-top: 0;
-    margin-bottom: 22px;
     color: #00FFF4;
 }
 
 .tags {
     color: #23527c;
     font-size: 12px;
-    margin-top: 30px;
 }
+
 .tags span {
     color: #C5C6C8;
 }
@@ -277,14 +267,40 @@ p {
     padding: 20px;
 }
 
+.full-screen {
+    border-bottom: 1px solid #00FFF6;
+}
+
 @media all and (min-width:768px) {
 
     #portfolio .section-heading {
         padding: 60px 0;
     }
 
+    .tags {
+        margin-top: 60px;
+    }
+
     article {
       margin: 50px auto;
+    }
+
+
+    .full-screen {
+       height: 50vh;
+    }
+
+    .promo-image {
+      max-width: 400px;
+      margin: 0 auto;
+      max-height: 300px;
+      width: 100%;
+      display: block;
+    }
+
+    .article-heading {
+        margin-bottom: 22px;
+        margin-top: 0;
     }
 
 }
@@ -296,11 +312,11 @@ p {
     }
 
     .full-screen {
-       border-bottom: 1px solid #00FFF6;
        height: 100vh;
     }
 
     .article-heading {
+        margin-bottom: 22px;
         margin-top: 30px;
     }
 
@@ -349,7 +365,19 @@ p {
     }
 
     .promo-image {
-        width: auto;
+      max-width: 100%;
+      margin: 0 auto;
+      max-height: 300px;
+      width: 400px;
+      display: block;
+    }
+
+    .section-heading {
+        padding: 20px;
+    }
+
+    .tags {
+        margin-top: 30px;
     }
 
 }

@@ -33,8 +33,8 @@ class Article extends React.PureComponent {
 
     const imagePath = require(`../images/${image}`);
 
-    const ImageComponent = ({ addition = '' }) => (
-      <LazyLoad>
+    const ImageComponent = ({ addition = '', height = 100 }) => (
+      <LazyLoad height={height} >
         <img src={imagePath} className={`promo-image${addition}`} alt={`logo ${title[language]}`} />
       </LazyLoad>
     );
@@ -42,7 +42,7 @@ class Article extends React.PureComponent {
     return (
       <div className="full-height full-screen">
         <article>
-          { isWide && (<Modal show={this.state.show} onHide={this.handleClose}> <ImageComponent addition="-modal" /> </Modal>)}
+          { isWide && (<Modal show={this.state.show} onHide={this.handleClose}> <ImageComponent addition="-modal" height="500" /> </Modal>)}
 
           <Col xs={12} sm={4}>
             { isWide && (<Button bsStyle="link" onClick={this.handleShow} className="open-item"> <ImageComponent /> </Button>)}
