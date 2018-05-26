@@ -86,7 +86,7 @@ const projects = [
   },
 
   {
-    image: 'gajzlerek.jpeg',
+    image: 'gajzlerek.png',
     description: {
       pl: 'Aplikacja na telefon Android, ułatwiający wysyłanie wiadomości sms na wybrany numer, oraz monitorowanie raportów ich doręcznia.',
       en: 'Android app that sends easily text messages to a particular number and allows for precise tracking of which messages were delivered or not.',

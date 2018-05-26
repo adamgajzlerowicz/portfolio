@@ -62,6 +62,8 @@ body {
 
 .promo-image-modal {
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .section-dark .section-heading {
@@ -272,9 +274,6 @@ p {
     padding: 20px;
 }
 
-.full-screen {
-    border-bottom: 1px solid #00FFF6;
-}
 
 .up-container {
     display: flex;
@@ -282,9 +281,11 @@ p {
     align-items: center;
 }
 
-
-
 @media all and (min-width:768px) {
+
+    .full-screen {
+        border-bottom: 1px solid #00FFF6;
+    }
 
     #portfolio .section-heading {
         padding: 43px 0;
