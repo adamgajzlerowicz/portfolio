@@ -111,8 +111,10 @@ class Home extends Component {
               </FlipMove>
             </div>
 
-            <Up onClick={() => scrollToView('portfolio')} className="up" />
+
           </section>
+
+          <button onClick={() => scrollToView('portfolio')} className="up"><Up alt="go up to portfolio section" /></button>
 
         </main>
         <footer>

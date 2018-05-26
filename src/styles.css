@@ -28,7 +28,7 @@ body {
     font-size: 30px;
 }
 
-.down {
+.down, .up{
     font-size: 100px;
     margin: 0 auto;
     flex: 2;
