@@ -1,7 +1,11 @@
 /* global window */
 import * as React from 'react';
 import LazyLoad from 'react-lazyload';
+import Down from 'react-icons/lib/fa/angle-down';
+import Up from 'react-icons/lib/fa/angle-up';
 import { Col, Modal, Button } from 'react-bootstrap';
+
+import { scrollToView } from '../utils';
 import t from '../translations';
 
 class Article extends React.PureComponent {
@@ -37,7 +41,7 @@ class Article extends React.PureComponent {
 
   render() {
     const {
-      image, description, title, language, technologies,
+      image, description, title, language, technologies, nextId,
     } = this.props;
 
     // eslint-disable-next-line
@@ -50,9 +54,9 @@ class Article extends React.PureComponent {
         <img src={imagePath} className={`promo-image${addition}`} alt={`logo ${title[language]}`} />
       </LazyLoad>
     );
-
+    console.log(nextId);
     return (
-      <div className="full-height full-screen">
+      <div className="full-height full-screen" id={title}>
         <article>
           { isWide && (<Modal show={this.state.show} onHide={this.handleClose}> <ImageComponent addition="-modal" height="500" /> </Modal>)}
 
@@ -65,6 +69,9 @@ class Article extends React.PureComponent {
             <h2 className="article-heading">{title[language]}</h2>
             <p className="article-content">{description[language]}</p>
             <p className="tags">{t.tags[language]}: {technologies.map(tech => <span key={Math.random()}> {tech} </span>) }</p>
+          </Col>
+          <Col xs={12}>
+            {nextId && <button onClick={() => scrollToView(nextId)} className="down"><Down alt="go to what i do section" /></button>}
           </Col>
         </article>
       </div>

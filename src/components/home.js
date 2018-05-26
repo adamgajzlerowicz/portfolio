@@ -16,11 +16,9 @@ import FlipMove from 'react-flip-move';
 import Article from './article';
 import projects from '../projects';
 import t from '../translations';
+import { scrollToView } from '../utils';
 
 const getClassName = index => (index % 2 === 0 ? 'dark' : 'light');
-
-/* eslint-disable-next-line */
-const scrollToView = id => window.scroll({ top: document.getElementById(id).offsetTop, behavior: 'smooth' });
 
 class Home extends Component {
   constructor(props) {
@@ -33,6 +31,8 @@ class Home extends Component {
     const { language, filter } = this.state;
     let index = 1;
     const otherLangage = language === 'pl' ? 'en' : 'pl';
+
+    let nextId = null;
 
     return (
       <div className="app">
@@ -105,8 +105,24 @@ class Home extends Component {
 
               <FlipMove>
                 {projects
-                  .filter(article => !filter || article.category === filter)
-                  .map(article => <Article key={article.title.pl} {...article} language={language} />)
+                  .filter(project => !filter || project.category === filter)
+                  .map((project, projectIndex, projectsClosure) => {
+                      const currentNextId = nextId;
+                      if (projectIndex >= projectsClosure.length - 1) {
+                        nextId = null;
+                      } else {
+                        nextId = projectsClosure[projectIndex + 1].title[language];
+                      }
+
+                    return (
+                      <Article
+                        key={project.title.pl}
+                        {...project}
+                        language={language}
+                        nextId={currentNextId}
+                      />
+                    );
+                })
                 }
               </FlipMove>
             </div>
