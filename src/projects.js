@@ -38,7 +38,7 @@ const projects = [
       en: 'Performance Horizon',
     },
     category: 'corporate',
-    technologies: ['php', 'react', 'redux', 'mysql', 'redis', 'gitlab', 'REST', 'TDD'],
+    technologies: ['php', 'react', 'redux', 'mysql', 'redis', 'gitlab', 'rest', 'tdd'],
   },
 
   {
