@@ -40,8 +40,9 @@ class Article extends React.PureComponent {
   }
 
   render() {
+
     const {
-      image, description, title, language, technologies, nextId,
+      image, description, title, language, technologies, nextId, currentId
     } = this.props;
 
     // eslint-disable-next-line
@@ -56,7 +57,7 @@ class Article extends React.PureComponent {
     );
     console.log(nextId);
     return (
-      <div className="full-height full-screen" id={title}>
+      <div className="full-height full-screen" id={currentId}>
         <article>
           { isWide && (<Modal show={this.state.show} onHide={this.handleClose}> <ImageComponent addition="-modal" height="500" /> </Modal>)}
 

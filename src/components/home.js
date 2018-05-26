@@ -32,7 +32,7 @@ class Home extends Component {
     let index = 1;
     const otherLangage = language === 'pl' ? 'en' : 'pl';
 
-    let nextId = null;
+    let nextId = projects[1].title[language].split(' ').join('');
 
     return (
       <div className="app">
@@ -107,11 +107,10 @@ class Home extends Component {
                 {projects
                   .filter(project => !filter || project.category === filter)
                   .map((project, projectIndex, projectsClosure) => {
-                      const currentNextId = nextId;
                       if (projectIndex >= projectsClosure.length - 1) {
                         nextId = null;
                       } else {
-                        nextId = projectsClosure[projectIndex + 1].title[language];
+                        nextId = projectsClosure[projectIndex + 1].title[language].split(' ').join('');
                       }
 
                     return (
@@ -119,7 +118,8 @@ class Home extends Component {
                         key={project.title.pl}
                         {...project}
                         language={language}
-                        nextId={currentNextId}
+                        currentId={project.title[language].split(' ').join('')}
+                        nextId={nextId}
                       />
                     );
                 })
