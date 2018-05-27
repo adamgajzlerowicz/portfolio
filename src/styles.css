@@ -41,7 +41,7 @@ body {
     width: 114px;
 }
 
-.down:hover {
+.down:hover, .up:hover {
     color: #23527c;
     transform: scale(1.1);
 }
@@ -279,129 +279,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-@media all and (min-width:768px) {
-
-    .full-screen {
-        border-bottom: 1px solid #00FFF6;
-    }
-
-    #portfolio .section-heading {
-        padding: 43px 0;
-    }
-
-    .tags {
-        margin-top: 60px;
-    }
-
-    article {
-      margin: 50px auto;
-    }
-
-
-    .full-screen {
-       height: 50vh;
-    }
-
-    .promo-image {
-      max-width: 400px;
-      margin: 0 auto;
-      max-height: 300px;
-      width: 100%;
-      display: block;
-    }
-
-    .article-heading {
-        margin-bottom: 22px;
-        margin-top: 0;
-    }
-
-    .scroller {
-        display: none;
-    }
-
-}
-
-@media all and (max-width:767px) {
-
-    * {
-        text-align: center;
-    }
-
-    .full-screen {
-       height: 100vh;
-    }
-
-    .article-heading {
-        margin-bottom: 22px;
-        margin-top: 30px;
-    }
-
-    #portfolio nav {
-        display: none;
-    }
-
-    .app-header, #what-i-do {
-        padding: 7vh 10px 10vh;
-    }
-
-    h1.app-title,  h1 {
-        font-size: 30px;
-    }
-    .app-title h2{
-        font-size: 22px;
-    }
-
-    h3 {
-        font-size: 17px;
-        line-height: 28px;
-    }
-
-    .app-sub-title {
-        font-size: 25px;
-    }
-
-    .down {
-        flex: 1;
-        font-size: 80px;
-        min-height: 80px;
-        max-height: 94px;
-    }
-
-    .down svg {
-        vertical-align: top !important;
-    }
-
-    footer {
-        text-align: center;
-    }
-
-    .footer-social {
-        justify-content: center;
-        margin-top: 40px;
-    }
-
-    .promo-image {
-      max-width: 100%;
-      margin: 0 auto;
-      max-height: 300px;
-      width: 400px;
-      display: block;
-    }
-
-    .section-heading {
-        padding: 20px;
-    }
-
-    .tags {
-        margin-top: 30px;
-    }
-
-    .scroller {
-
-    }
-
 }
 
 /* fonts */

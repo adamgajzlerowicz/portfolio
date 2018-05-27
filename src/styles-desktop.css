@@ -1,0 +1,41 @@
+@media all and (min-width:768px) {
+
+    .full-screen {
+        border-bottom: 1px solid #00FFF6;
+    }
+
+    #portfolio .section-heading {
+        padding: 43px 0;
+    }
+
+    .tags {
+        margin-top: 60px;
+    }
+
+    article {
+      margin: 50px auto;
+    }
+
+
+    .full-screen {
+       height: 50vh;
+    }
+
+    .promo-image {
+      max-width: 400px;
+      margin: 0 auto;
+      max-height: 300px;
+      width: 100%;
+      display: block;
+    }
+
+    .article-heading {
+        margin-bottom: 22px;
+        margin-top: 0;
+    }
+
+    .scroller {
+        display: none;
+    }
+
+}

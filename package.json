@@ -22,13 +22,15 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint src --ext .js --cache --fix",
-    "push": "git add .; git commit -m 'push'; git push; yarn deploy"
+    "push": "git add .; git commit -m 'push'; git push; yarn deploy",
+    "analyze": "source-map-explorer build/static/js/main.*"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "source-map-explorer": "^1.5.0"
   }
 }

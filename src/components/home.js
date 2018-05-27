@@ -130,6 +130,7 @@ class Home extends Component {
 
           </section>
           <section className="section-dark up-container">
+            <button onClick={() => scrollToView('portfolio')} className="up"><Up alt="go up to portfolio section" /></button>
           </section>
         </main>
         <footer>

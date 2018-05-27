@@ -46,7 +46,7 @@ class Article extends React.PureComponent {
     } = this.props;
 
     // eslint-disable-next-line
-    const isWide = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 768;
+    const isMobile = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 768;
 
     const imagePath = require(`../images/${image}`);
 
@@ -55,15 +55,15 @@ class Article extends React.PureComponent {
         <img src={imagePath} className={`promo-image${addition}`} alt={`logo ${title[language]}`} />
       </LazyLoad>
     );
-    console.log(nextId);
+
     return (
       <div className="full-height full-screen" id={currentId}>
         <article>
-          { isWide && (<Modal show={this.state.show} onHide={this.handleClose}> <ImageComponent addition="-modal" height="500" /> </Modal>)}
+          { !isMobile && (<Modal show={this.state.show} onHide={this.handleClose}> <ImageComponent addition="-modal" height="500" /> </Modal>)}
 
           <Col xs={12} sm={4}>
-            { isWide && (<Button bsStyle="link" onClick={this.handleShow} className="open-item"> <ImageComponent /> </Button>)}
-            { !isWide && <ImageComponent /> }
+            { !isMobile && (<Button bsStyle="link" onClick={this.handleShow} className="open-item"> <ImageComponent /> </Button>)}
+            { isMobile && <ImageComponent /> }
 
           </Col>
           <Col xs={12} sm={8}>
@@ -71,10 +71,8 @@ class Article extends React.PureComponent {
             <p className="article-content">{description[language]}</p>
             <p className="tags">{t.tags[language]}: {technologies.map(tech => <span key={Math.random()}> {tech} </span>) }</p>
           </Col>
-          <Col xs={12}>
             { nextId && <button onClick={() => scrollToView(nextId)} className="down scroller"><Down alt="go to what i do section" /></button> }
-            { !nextId && <button onClick={() => scrollToView('portfolio')} className="up"><Up alt="go up to portfolio section" /></button> }
-          </Col>
+            { !nextId && <button onClick={() => scrollToView('app')} className="up scroller"><Up alt="go back to top" /></button> }
         </article>
       </div>
     );
