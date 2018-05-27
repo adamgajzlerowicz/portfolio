@@ -126,7 +126,7 @@ hr {
 
 .footer-social {
     display: flex;
-    justify-content: flex-end;
+
 }
 
 .footer-social svg{
@@ -236,7 +236,7 @@ p {
 #portfolio nav {
     float: left;
     transform: rotate(-90deg);
-    margin-top: 292px;
+    margin-top: 279px;
     margin-left: -300px;
     position: absolute;
     width: 500px;

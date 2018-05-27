@@ -1,5 +1,9 @@
 @media all and (min-width:768px) {
 
+    .footer-social {
+      justify-content: flex-end;
+    }
+
     .full-height {
        padding: 0 0 80px 0;
     }
