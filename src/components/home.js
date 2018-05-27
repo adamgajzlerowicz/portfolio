@@ -62,7 +62,7 @@ class Home extends Component {
             <h1 className="section-heading flex">{t.whatIDo[language]}</h1>
             <h3 className="center-text center width flex">{t.whatICreate[language]}</h3>
             <h3 className="center-text center width flex"> {t.motivation[language]} </h3>
-            <button onClick={() => scrollToView('portfolio')} className="down"><Down alt="go to my portfolio" /></button>
+            <button onClick={() => scrollToView('portfolio')} className="down" aria-label="go to my portfolio"><Down alt="go to my portfolio" /></button>
           </section>
 
           <section id="portfolio" className={`section-${getClassName(index++)}`}>
@@ -113,7 +113,7 @@ class Home extends Component {
                 }
               </FlipMove>
             </div>
-            <button onClick={() => scrollToView('app')} className="up"><Up alt="go up to top" /></button>
+            <button onClick={() => scrollToView('app')} className="up" aria-label="go to top"><Up alt="go up to top" /></button>
 
           </section>
         </main>
