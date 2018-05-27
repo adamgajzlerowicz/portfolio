@@ -24,7 +24,7 @@ const getClassName = index => (index % 2 === 0 ? 'dark' : 'light');
 class Home extends Component {
   constructor(props) {
     super(props);
-    const language = sessionStorage.getItem('language') || 'pl';
+    const language = sessionStorage.getItem('language') || 'en';
     this.state = { language, filter: null };
   }
 
@@ -44,8 +44,8 @@ class Home extends Component {
         >
           {language === 'pl' && <img src={GB} height="16" alt="change display language to english" />}
           {language === 'en' && <img src={PL} height="16" alt="ustaw jezyk polski" />}
-
         </div>
+        <button className="home" aria-label="go back to top" onClick={() => scrollToView('app')}><h4>AG</h4></button>
 
         <header className="app-header">
           <div id="avatar" />
@@ -109,13 +109,7 @@ class Home extends Component {
               <FlipMove>
                 {projects
                   .filter(project => !filter || project.category === filter)
-                  .map(project => (
-                    <Article
-                      key={project.title.pl}
-                      {...project}
-                      language={language}
-                    />
-                    ))
+                  .map(project => <Article key={project.title.pl} {...project} language={language} /> )
                 }
               </FlipMove>
             </div>

@@ -1,30 +1,4 @@
 
-/**
-  corporate and colaboration
-  SME Professional
-  Performance Horizon
-  CSV extractor
-
-  fun:
-  Czy jest tarta
-  O ktorej jest obiad
-  Gajzlerek
-  Another day another word
-
-  plugins:
-  React Select
-  React Infini Grid
-  Youtube muter chrome plugin
-
-  solo:
-  Chata małolata
-  Skeletoon
-  Wilson cater hire
-  Lyles-Sutherland CRM
-  New Future Me document database
-
-  */
-
 const projects = [
 
   {
@@ -79,7 +53,7 @@ const projects = [
     },
     title: {
       pl: 'Czy jest tarta',
-      en: 'Is there tart',
+      en: 'Is there a tart',
     },
     category: 'fun',
     technologies: ['react', 'redux', 'websocket', 'real time'],

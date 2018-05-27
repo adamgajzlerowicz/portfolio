@@ -281,6 +281,27 @@ p {
     align-items: center;
 }
 
+
+button {background: transparent;
+    outline: none;
+    border: none;
+}
+
+.home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #00FFF4;
+    padding: 0px 7px;
+    z-index: 2;
+}
+.home h4 {
+    padding: 0;
+    margin: 0;
+}
+
+
+
 /* fonts */
 
 h1 {
@@ -298,7 +319,12 @@ h3 {
     Font-Size: 20px;
 }
 
+h4 {
+    Font-Family: 'Montserrat', sans-serif;
+}
+
 p {
  Font-Family: 'Montserrat', Serif;
  Font-Size: 18px;
+ line-height: 28px;
 }
