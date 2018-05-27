@@ -109,15 +109,13 @@ class Home extends Component {
               <FlipMove>
                 {projects
                   .filter(project => !filter || project.category === filter)
-                  .map((project) => {
-                    return (
-                      <Article
-                        key={project.title.pl}
-                        {...project}
-                        language={language}
-                      />
-                    );
-                })
+                  .map(project => (
+                    <Article
+                      key={project.title.pl}
+                      {...project}
+                      language={language}
+                    />
+                    ))
                 }
               </FlipMove>
             </div>

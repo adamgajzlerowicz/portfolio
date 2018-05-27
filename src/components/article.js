@@ -4,6 +4,7 @@ import LazyLoad from 'react-lazyload';
 import { Col, Modal, Button } from 'react-bootstrap';
 
 import t from '../translations';
+import { isMobile } from '../utils';
 
 class Article extends React.PureComponent {
   constructor(props, context) {
@@ -37,13 +38,9 @@ class Article extends React.PureComponent {
   }
 
   render() {
-
     const {
       image, description, title, language, technologies,
     } = this.props;
-
-    // eslint-disable-next-line
-    const isMobile = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 768;
 
     const imagePath = require(`../images/${image}`);
 

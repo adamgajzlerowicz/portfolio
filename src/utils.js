@@ -1,16 +1,20 @@
+/* eslint-disable */
 
-function getPosition(element) {
-    var yPosition = 0;
+const getPosition = (element) => {
+  let yPosition = 0;
 
-    while(element) {
-        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
-        element = element.offsetParent;
-    }
+  while (element) {
+    yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+    element = element.offsetParent;
+  }
 
-    return yPosition
-}
+  return yPosition;
+};
 
-/* eslint-disable-next-line*/
 const scrollToView = id => window.scroll({ top: getPosition(document.getElementById(id)), behavior: 'smooth' });
 
-export { scrollToView };
+const isMobile = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 768;
+
+/* eslint-enable */
+
+export { scrollToView, isMobile };
