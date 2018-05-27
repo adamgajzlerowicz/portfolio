@@ -121,12 +121,12 @@ class Home extends Component {
           <Col sm={4} xs={12}> © {new Date().getFullYear()} Adam Gajzlerowicz </Col>
 
           <Col sm={8} xs={12} className="footer-social">
-            <a href="https://twitter.com/nelf86" target="_blank" rel="noopener noreferrer" ><Twitter alt="see me on twitter" /></a>
-            <a href="https://steamcommunity.com/id/entity02" target="_blank" rel="noopener noreferrer" ><Steam alt="see me on steam" /></a>
-            <a href="https://www.linkedin.com/in/adam-gajzlerowicz-26311934" target="_blank" rel="noopener noreferrer" ><LinkedIn alt="see me on linkedin" /></a>
-            <a href="https://github.com/adamgajzlerowicz" target="_blank" rel="noopener noreferrer" ><Github alt="see me on github" /></a>
-            <a href="https://stackoverflow.com/users/1333744/adam" target="_blank" rel="noopener noreferrer" ><StackOverflow alt="see me on stack overflow" /></a>
-            <a href="mailto:nelf86@gmail.com" target="_blank" rel="noopener noreferrer" ><Email alt="send me an email" /></a>
+            <a href="https://twitter.com/nelf86" aria-label="see me on twitter" target="_blank" rel="noopener noreferrer" ><Twitter alt="see me on twitter" /></a>
+            <a href="https://steamcommunity.com/id/entity02" aria-label="see me on steam" target="_blank" rel="noopener noreferrer" ><Steam alt="see me on steam" /></a>
+            <a href="https://www.linkedin.com/in/adam-gajzlerowicz-26311934" aria-label="see me on linkedin" target="_blank" rel="noopener noreferrer" ><LinkedIn alt="see me on linkedin" /></a>
+            <a href="https://github.com/adamgajzlerowicz" aria-label="see me on github" target="_blank" rel="noopener noreferrer" ><Github alt="see me on github" /></a>
+            <a href="https://stackoverflow.com/users/1333744/adam" aria-label="see me on stack overflow" target="_blank" rel="noopener noreferrer" ><StackOverflow alt="see me on stack overflow" /></a>
+            <a href="mailto:nelf86@gmail.com" aria-label="sene me an email" target="_blank" rel="noopener noreferrer" ><Email alt="send me an email" /></a>
           </Col>
 
         </footer>
