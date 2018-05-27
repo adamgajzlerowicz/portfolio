@@ -72,7 +72,8 @@ class Article extends React.PureComponent {
             <p className="tags">{t.tags[language]}: {technologies.map(tech => <span key={Math.random()}> {tech} </span>) }</p>
           </Col>
           <Col xs={12}>
-            {nextId && <button onClick={() => scrollToView(nextId)} className="down"><Down alt="go to what i do section" /></button>}
+            { nextId && <button onClick={() => scrollToView(nextId)} className="down scroller"><Down alt="go to what i do section" /></button> }
+            { !nextId && <button onClick={() => scrollToView('portfolio')} className="up"><Up alt="go up to portfolio section" /></button> }
           </Col>
         </article>
       </div>
