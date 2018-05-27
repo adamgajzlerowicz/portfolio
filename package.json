@@ -10,7 +10,6 @@
     "react-dom": "^16.3.2",
     "react-flip-move": "^3.0.2",
     "react-icons": "^2.2.7",
-    "react-lazyload": "^2.3.0",
     "react-scripts": "1.1.4",
     "svg-country-flags": "^1.2.1"
   },

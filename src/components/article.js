@@ -1,6 +1,5 @@
 /* global window */
 import * as React from 'react';
-import LazyLoad from 'react-lazyload';
 import { Col, Modal, Button } from 'react-bootstrap';
 
 import t from '../translations';
@@ -45,9 +44,7 @@ class Article extends React.PureComponent {
     const imagePath = require(`../images/${image}`);
 
     const ImageComponent = ({ addition = '', height = 100 }) => (
-      <LazyLoad height={height} >
         <img src={imagePath} className={`promo-image${addition}`} alt={`logo ${title[language]}`} />
-      </LazyLoad>
     );
 
     return (
