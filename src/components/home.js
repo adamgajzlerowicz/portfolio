@@ -10,8 +10,9 @@ import Email from 'react-icons/lib/fa/envelope';
 import Down from 'react-icons/lib/fa/angle-down';
 import Up from 'react-icons/lib/fa/angle-up';
 import { Col } from 'react-bootstrap';
-import Flag from 'react-world-flags';
 import FlipMove from 'react-flip-move';
+import PL from 'svg-country-flags/svg/pl.svg';
+import GB from 'svg-country-flags/svg/gb.svg';
 
 import Article from './article';
 import projects from '../projects';
@@ -43,7 +44,9 @@ class Home extends Component {
           }}
           className="language"
         >
-          <Flag code={otherLangage === 'pl' ? 'pl' : 'gb'} height="16" alt="change display language" />
+          {language === 'pl' && <img src={GB} height="16" alt="change display language to english" />}
+          {language === 'en' && <img src={PL} height="16" alt="ustaw jezyk polski" />}
+
         </div>
 
         <header className="app-header">
