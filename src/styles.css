@@ -292,7 +292,7 @@ button {background: transparent;
     top: 20px;
     left: 20px;
     color: #00FFF4;
-    padding: 0px 7px;
+    padding: 0;
     z-index: 2;
 }
 .home h4 {
