@@ -33,8 +33,6 @@ class Home extends Component {
     let index = 1;
     const otherLangage = language === 'pl' ? 'en' : 'pl';
 
-    let nextId = projects[1].title[language].split(' ').join('');
-
     return (
       <div className="app">
         <div
@@ -53,7 +51,9 @@ class Home extends Component {
           <div id="avatar" />
           <h1 className="app-title">Adam Gajzlerowicz</h1>
           <h2 className="app-sub-title">{t.jobTitle[this.state.language]}</h2>
-          <button onClick={() => scrollToView('what-i-do')} className="down"><Down alt="go to what i do section" /></button>
+          <button onClick={() => scrollToView('what-i-do')} className="down" aria-label="Find out what I do">
+            <Down alt="go to what i do section" />
+          </button>
         </header>
 
         <main className="container">
@@ -109,31 +109,20 @@ class Home extends Component {
               <FlipMove>
                 {projects
                   .filter(project => !filter || project.category === filter)
-                  .map((project, projectIndex, projectsClosure) => {
-                      if (projectIndex >= projectsClosure.length - 1) {
-                        nextId = null;
-                      } else {
-                        nextId = projectsClosure[projectIndex + 1].title[language].split(' ').join('');
-                      }
-
+                  .map((project) => {
                     return (
                       <Article
                         key={project.title.pl}
                         {...project}
                         language={language}
-                        currentId={project.title[language].split(' ').join('')}
-                        nextId={nextId}
                       />
                     );
                 })
                 }
               </FlipMove>
             </div>
+            <button onClick={() => scrollToView('app')} className="up"><Up alt="go up to top" /></button>
 
-
-          </section>
-          <section className="section-dark up-container">
-            <button onClick={() => scrollToView('portfolio')} className="up"><Up alt="go up to portfolio section" /></button>
           </section>
         </main>
         <footer>
