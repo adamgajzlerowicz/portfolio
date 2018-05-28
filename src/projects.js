@@ -1,19 +1,7 @@
 
 const projects = [
 
-  {
-    image: 'phg.jpeg',
-    description: {
-      pl: 'Dla świata - dominuąca firma na rynku afiliacyjnym. Dla mnie - PHP wielkiej skali.',
-      en: 'A large scale affiliate market platform that allows product advertisers to monitor their partners and maintain the relationship.',
-    },
-    title: {
-      pl: 'Performance Horizon',
-      en: 'Performance Horizon',
-    },
-    category: 'corporate',
-    technologies: ['php', 'react', 'redux', 'mysql', 'redis', 'gitlab', 'rest', 'tdd'],
-  },
+
 
   {
     image: 'sme.jpeg',
@@ -57,6 +45,20 @@ const projects = [
     },
     category: 'fun',
     technologies: ['react', 'redux', 'websocket', 'real time'],
+  },
+
+  {
+    image: 'phg.jpeg',
+    description: {
+      pl: 'Dla świata - dominuąca firma na rynku afiliacyjnym. Dla mnie - PHP wielkiej skali.',
+      en: 'A large scale affiliate market platform that allows product advertisers to monitor their partners and maintain the relationship.',
+    },
+    title: {
+      pl: 'Performance Horizon',
+      en: 'Performance Horizon',
+    },
+    category: 'corporate',
+    technologies: ['php', 'react', 'redux', 'mysql', 'redis', 'gitlab', 'rest', 'tdd'],
   },
 
   {
