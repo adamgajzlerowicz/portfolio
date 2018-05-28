@@ -19,7 +19,7 @@ const projects = [
     image: 'sme.jpeg',
     description: {
       pl: 'Największa w Szkocji platforma do zarządzania biurami nieruchmości. Gigantyczna aplikacja do przechowywania danych dotyczących najemców, wynajmuących oraz danych finansowych.',
-      en: 'A biggest property letting platform in Scotland. It allows management of company assets and storing data about tenants and many, many more',
+      en: 'A biggest property letting platform in Scotland. It allows management of company assets and storing data about tenants and much, much more',
     },
     title: {
       pl: 'SME Professional',
@@ -63,7 +63,7 @@ const projects = [
     image: 'gajzlerek.png',
     description: {
       pl: 'Aplikacja na telefon Android, ułatwiający wysyłanie wiadomości sms na wybrany numer, oraz monitorowanie raportów ich doręcznia.',
-      en: 'Android app that sends easily text messages to a particular number and allows for precise tracking of which messages were delivered or not.',
+      en: 'Android app that sends easily text messages to a particular number and allows for precise tracking of which messages were delivered and which not.',
     },
     title: {
       pl: 'Gajzlerek',
@@ -77,7 +77,7 @@ const projects = [
     image: 'anotherdayanotherword.jpeg',
     description: {
       pl: 'Plugin do przeglądarki Chrome pomagający w nauce języka angielskieo poprzez podmianę wybranych wyrazów na ich synonimy, przez co wyraz którego chcemy się nauczyć będzie się pojawiać cześciej w tekście.',
-      en: 'A Google Chrome plugin that uses Thesaurus for finding synonyms for selected words and replaces them on any website you enter.',
+      en: 'A Google Chrome plugin that uses Thesaurus for finding synonyms for selected words and replaces them inside of content on any website you enter.',
     },
     title: {
       pl: 'Another day another word',
@@ -91,7 +91,7 @@ const projects = [
     image: 'react-select.jpeg',
     description: {
       pl: 'Biblioteka do React udostępniająca komponent Dropdown, wspierający wyszkukiwanie oraz nawigację klawiszami.',
-      en: 'Library that provides searchable dropdown that allows hot options replacement. It made life of many people easier.',
+      en: 'Library that provides searchable dropdown component supporting keyboard navigation. It made life of many people way easier.',
     },
     title: {
       pl: 'React Select',
@@ -105,7 +105,7 @@ const projects = [
     image: 'react-infini-grid.jpeg',
     description: {
       pl: 'Biblioteka generuąca listę bardzo dużą liste elementów w jednym widoku, przy czym wszystkie niewidoczne elementy zostają usunięte w niewidoczny dla użytkownika sposób.',
-      en: 'Library which generates grid, allowing to display hundreds of thousands of items on one screen without pagination, showing only ones that are in a viewport. This makes developer\'s life so much easier!',
+      en: 'Library which generates grid, allowing to display hundreds of thousands of items on one screen without pagination, showing only ones that are in a viewport. There is need to implement pagination for the data set.',
     },
     title: {
       pl: 'React Infini Grid',
@@ -134,7 +134,7 @@ const projects = [
     image: 'chata-malolata.jpeg',
     description: {
       pl: 'Desktopowa aplikacja pozwalajaca na monitorowanie ilość dzieci w sali zabaw.',
-      en: 'Helps company owners to monitor how many toddlers are on their business premisses, and now much their paretns will pay for their time!',
+      en: 'Helps company owners to monitor how many toddlers are on their business premisses, and how much money their parents will pay for their stay!',
     },
     title: {
       pl: 'Chata małolata',
@@ -145,25 +145,12 @@ const projects = [
   },
 
 
-  {
-    image: 'skeletoon.jpeg',
-    description: {
-      pl: 'Pakiet startowy dla dowolnej aplikacji. Wspierją komunikację z bazą danych, rejestrację użytkowników i zabezpieczanie ścieżek url.',
-      en: 'A base for any application that uses modern backend, and provides basic api for user authorization.',
-    },
-    title: {
-      pl: 'Skeletoon',
-      en: 'Skeletoon',
-    },
-    category: 'solo',
-    technologies: ['graphql', 'react', 'apollo', 'docker', 'json webtoken'],
-  },
 
   {
     image: 'wilson.jpeg',
     description: {
       pl: 'Aplikacja internetowa która pozwala na dodanie wynajmowanych akresoriów weselnych do koszyka, przyspieszający czas i realizaję zamówienia.',
-      en: 'A system that allows preorder of quality catering hire to your wedding. You don\'t need pen and paper anymore! Just add items directly to your requested list!',
+      en: 'A system that allows preorder of quality catering hire to a wedding. You don\'t need pen and paper for this anymore! Just add items directly to your request list!',
     },
     title: {
       pl: 'Wynajem akcesoriow weselnych',
@@ -191,7 +178,7 @@ const projects = [
     image: 'docstore.jpeg',
     description: {
       pl: 'Baza do zamieszczania i udostepniania dokumentów studentom przypisanym do danego kursu.',
-      en: 'Document upload and student management database',
+      en: 'Document upload and student management database.',
     },
     title: {
       pl: 'New future me',
@@ -199,6 +186,21 @@ const projects = [
     },
     category: 'solo',
     technologies: ['laravel', 'mysql', 'migrations'],
+  },
+
+
+  {
+    image: 'skeletoon.jpeg',
+    description: {
+      pl: 'Pakiet startowy dla dowolnej aplikacji. Wspierją komunikację z bazą danych, rejestrację użytkowników i zabezpieczanie ścieżek url.',
+      en: 'A base for any application that uses modern backend, and provides basic api for user authorization.',
+    },
+    title: {
+      pl: 'Skeletoon',
+      en: 'Skeletoon',
+    },
+    category: 'solo',
+    technologies: ['graphql', 'react', 'apollo', 'docker', 'json webtoken'],
   },
 
 ];
