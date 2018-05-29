@@ -20,9 +20,11 @@ class Article extends React.PureComponent {
   }
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions);
+    window.addEventListener('scroll', this.updateDimensions);
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions);
+    window.removeEventListener('scroll', this.updateDimensions);
   }
 
   updateDimensions() {
