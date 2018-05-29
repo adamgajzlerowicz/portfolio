@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Col, Modal, Button } from 'react-bootstrap';
 
 import t from '../translations';
-import { isMobile } from '../utils';
+import { checkIfMobile } from '../utils';
 
 class Article extends React.PureComponent {
   constructor(props, context) {
@@ -15,6 +15,7 @@ class Article extends React.PureComponent {
 
     this.state = {
       show: false,
+      isMobile: checkIfMobile()
     };
   }
   componentDidMount() {
@@ -25,7 +26,7 @@ class Article extends React.PureComponent {
   }
 
   updateDimensions() {
-    this.forceUpdate();
+    this.setState({isMobile: checkIfMobile()});
   }
 
   handleClose() {
@@ -40,6 +41,8 @@ class Article extends React.PureComponent {
     const {
       image, description, title, language, technologies,
     } = this.props;
+
+    const { isMobile } = this.state;
 
     const imagePath = require(`../images/${image}`);
 

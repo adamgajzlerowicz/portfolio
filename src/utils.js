@@ -13,8 +13,8 @@ const getPosition = (element) => {
 
 const scrollToView = id => window.scroll({ top: getPosition(document.getElementById(id)), behavior: 'smooth' });
 
-const isMobile = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 768;
+const checkIfMobile = () => Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 768;
 
 /* eslint-enable */
 
-export { scrollToView, isMobile };
+export { scrollToView, checkIfMobile };
