@@ -1,9 +1,6 @@
-/* global window */
+/* global */
 import * as React from 'react';
 import { Col, Modal, Button } from 'react-bootstrap';
-
-import t from '../translations';
-import { checkIfMobile } from '../utils';
 
 class Article extends React.PureComponent {
   constructor(props, context) {
@@ -11,24 +8,10 @@ class Article extends React.PureComponent {
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
-    this.updateDimensions = this.updateDimensions.bind(this);
 
     this.state = {
-      show: false,
-      isMobile: checkIfMobile()
+      show: false
     };
-  }
-  componentDidMount() {
-    window.addEventListener('resize', this.updateDimensions);
-    window.addEventListener('scroll', this.updateDimensions);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
-    window.removeEventListener('scroll', this.updateDimensions);
-  }
-
-  updateDimensions() {
-    this.setState({isMobile: checkIfMobile()});
   }
 
   handleClose() {
@@ -41,31 +24,54 @@ class Article extends React.PureComponent {
 
   render() {
     const {
-      image, description, title, language, technologies,
+      image,
+      description,
+      title,
+      language,
+      technologies,
+      isMobile
     } = this.props;
-
-    const { isMobile } = this.state;
 
     const imagePath = require(`../images/${image}`);
 
-    const ImageComponent = ({ addition = '', height = 100 }) => (
-        <img src={imagePath} className={`promo-image${addition}`} alt={`logo ${title[language]}`} />
+    const Image = ({ addition = '' }) => (
+      <img
+        src={imagePath}
+        className={`promo-image${addition}`}
+        alt={`logo ${title[language]}`}
+      />
     );
 
     return (
       <div className="full-height full-screen">
         <article>
-          { !isMobile && (<Modal show={this.state.show} onHide={this.handleClose}> <ImageComponent addition="-modal" height="500" /> </Modal>)}
+          {!isMobile && (
+            <Modal show={this.state.show} onHide={this.handleClose}>
+              <div onClick={() => this.setState({ show: false })}>
+                <Image addition="-modal" width="1000" />
+              </div>
+            </Modal>
+          )}
 
           <Col xs={12} sm={4}>
-            { !isMobile && (<Button bsStyle="link" onClick={this.handleShow} className="open-item"> <ImageComponent /> </Button>)}
-            { isMobile && <ImageComponent /> }
-
+            {!isMobile && (
+              <Button
+                bsStyle="link"
+                onClick={this.handleShow}
+                className="open-item"
+              >
+                <Image />
+              </Button>
+            )}
+            {isMobile && <Image />}
           </Col>
           <Col xs={12} sm={8}>
-            <h2 className="article-heading">{title[language]}</h2>
-            <p className="article-content">{description[language]}</p>
-            <p className="tags">{t.tags[language]}: {technologies.map(tech => <span key={Math.random()}> {tech} </span>) }</p>
+            <h2 className="article-heading">{title}</h2>
+            <p className="article-content">{description}</p>
+            <p className="tags">
+              Technologies used:
+              <span>{technologies.join(', ')}</span>
+            </p>
           </Col>
         </article>
       </div>

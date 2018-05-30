@@ -1,85 +1,105 @@
+@media all and (max-width: 767px) {
+  * {
+    text-align: center;
+  }
 
-@media all and (max-width:767px) {
+  .full-screen {
+    height: 100vh;
+  }
 
-    * {
-        text-align: center;
-    }
+  .article-heading {
+    margin-bottom: 22px;
+    margin-top: 30px;
+  }
 
-    .full-screen {
-       height: 100vh;
-    }
+  .app-header,
+  #what-i-do {
+    padding: 7vh 10px 10vh;
+  }
 
-    .article-heading {
-        margin-bottom: 22px;
-        margin-top: 30px;
-    }
+  h1.app-title,
+  h1 {
+    font-size: 30px;
+  }
+  .app-title h2 {
+    font-size: 22px;
+  }
 
-    #portfolio nav {
-        display: none;
-    }
+  h3 {
+    font-size: 17px;
+    line-height: 28px;
+  }
 
-    .app-header, #what-i-do {
-        padding: 7vh 10px 10vh;
-    }
+  .app-sub-title {
+    font-size: 25px;
+  }
 
-    h1.app-title,  h1 {
-        font-size: 30px;
-    }
-    .app-title h2{
-        font-size: 22px;
-    }
+  .down {
+    flex: 1;
+    font-size: 80px;
+    min-height: 80px;
+    max-height: 94px;
+  }
 
-    h3 {
-        font-size: 17px;
-        line-height: 28px;
-    }
+  .down svg {
+    vertical-align: top !important;
+  }
 
-    .app-sub-title {
-        font-size: 25px;
-    }
+  footer {
+    text-align: center;
+  }
 
-    .down {
-        flex: 1;
-        font-size: 80px;
-        min-height: 80px;
-        max-height: 94px;
-    }
+  .footer-social {
+    justify-content: center;
+    margin-top: 40px;
+  }
 
-    .down svg {
-        vertical-align: top !important;
-    }
+  .promo-image {
+    max-width: 100%;
+    margin: 0 auto;
+    max-height: 300px;
+    width: 400px;
+    display: block;
+  }
 
-    footer {
-        text-align: center;
-    }
+  .section-heading {
+    padding: 70px;
+  }
 
-    .footer-social {
-        justify-content: center;
-        margin-top: 40px;
-    }
+  .tags {
+    margin-top: 30px;
+  }
 
-    .promo-image {
-      max-width: 100%;
-      margin: 0 auto;
-      max-height: 300px;
-      width: 400px;
-      display: block;
-    }
+  article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 7vh 10px 10vh;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .section-heading {
-        padding: 70px;
-    }
+  .hidden-item {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
 
-    .tags {
-        margin-top: 30px;
-    }
+  .visible-item {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
 
-    article {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        padding: 7vh 10px 10vh;
-        justify-content: space-between;
-        align-items: center;
-    }
+  #portfolio nav {
+    position: fixed;
+    background-color: #1f2834;
+    z-index: 3;
+    box-shadow: 0 -5px 5px -5px #23527c;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+  }
 }

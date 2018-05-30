@@ -1,4 +1,4 @@
-/* global sessionStorage */
+/* global window document */
 
 import React, { Component } from 'react';
 import StackOverflow from 'react-icons/lib/fa/stack-overflow';
@@ -11,124 +11,232 @@ import Down from 'react-icons/lib/fa/angle-down';
 import Up from 'react-icons/lib/fa/angle-up';
 import { Col } from 'react-bootstrap';
 import FlipMove from 'react-flip-move';
-import PL from 'svg-country-flags/svg/pl.svg';
-import GB from 'svg-country-flags/svg/gb.svg';
 
 import Article from './article';
 import projects from '../projects';
-import t from '../translations';
-import { scrollToView } from '../utils';
+import { scrollToView, checkIfMobile, getPosition } from '../utils';
 
 const getClassName = index => (index % 2 === 0 ? 'dark' : 'light');
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    const language = sessionStorage.getItem('language') || 'en';
-    this.state = { language, filter: null };
+    this.updateDimensions = this.updateDimensions.bind(this);
+    this.state = {
+      filter: null,
+      isMobile: checkIfMobile(),
+      floatPortfolio: true
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
+    window.addEventListener('scroll', this.updateDimensions);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+    window.removeEventListener('scroll', this.updateDimensions);
+  }
+
+  updateDimensions() {
+    this.setState({
+      isMobile: checkIfMobile(),
+      floatPortfolio:
+        getPosition(document.getElementById('portfolio')) - 1 >= window.scrollY
+    });
   }
 
   render() {
     const { language, filter } = this.state;
+    const { floatPortfolio: showPortfolioNav } = this.state;
+
     let index = 1;
-    const otherLangage = language === 'pl' ? 'en' : 'pl';
+
+    const { isMobile } = this.state;
 
     return (
       <div className="app">
-        <div
-          onClick={() => {
-            this.setState({ language: otherLangage });
-            sessionStorage.setItem('language', otherLangage);
-          }}
-          className="language"
+        <button
+          className="home"
+          aria-label="go back to top"
+          onClick={() => scrollToView('app')}
         >
-          {language === 'pl' && <img src={GB} height="16" alt="change display language to english" />}
-          {language === 'en' && <img src={PL} height="16" alt="ustaw jezyk polski" />}
-        </div>
-        <button className="home" aria-label="go back to top" onClick={() => scrollToView('app')}><h4>AG</h4></button>
+          <h4>AG</h4>
+        </button>
 
         <header className="app-header">
           <div id="avatar" />
           <h1 className="app-title">Adam Gajzlerowicz</h1>
-          <h2 className="app-sub-title">{t.jobTitle[this.state.language]}</h2>
-          <button onClick={() => scrollToView('what-i-do')} className="down" aria-label="Find out what I do">
+          <h2 className="app-sub-title">Web application developer</h2>
+          <button
+            onClick={() => scrollToView('what-i-do')}
+            className="down"
+            aria-label="Find out what I do"
+          >
             <Down alt="go to what i do section" />
           </button>
         </header>
 
         <main className="container">
-
-          <section id="what-i-do" className={`center-text section-${getClassName(index++)}`}>
-            <h1 className="section-heading flex">{t.whatIDo[language]}</h1>
-            <h3 className="center-text center width flex">{t.whatICreate[language]}</h3>
-            <h3 className="center-text center width flex"> {t.motivation[language]} </h3>
-            <button onClick={() => scrollToView('portfolio')} className="down" aria-label="go to my portfolio"><Down alt="go to my portfolio" /></button>
+          <section
+            id="what-i-do"
+            className={`center-text section-${getClassName(index++)}`}
+          >
+            <h1 className="section-heading flex">What I create?</h1>
+            <h3 className="center-text center width flex">
+              I create awesome and fun web applications!
+            </h3>
+            <h3 className="center-text center width flex">
+              I love creating apps that make people's live easier
+            </h3>
+            <button
+              onClick={() => scrollToView('portfolio')}
+              className="down"
+              aria-label="go to my portfolio"
+            >
+              <Down alt="go to my portfolio" />
+            </button>
           </section>
 
-          <section id="portfolio" className={`section-${getClassName(index++)}`}>
+          <section
+            id="portfolio"
+            className={`section-${getClassName(index++)}`}
+          >
             <div className="center width">
-              <h1 className="section-heading">{t.pastProjects[language]}</h1>
+              <h1 className="section-heading">Past projects</h1>
 
-              <nav>
+              <nav
+                className={showPortfolioNav ? 'hidden-item' : 'visible-item'}
+              >
                 <button
-                  onClick={() => this.setState({ filter: null })}
+                  onClick={() => {
+                    scrollToView('portfolio');
+                    this.setState({ filter: null });
+                  }}
                   className={filter === null ? 'active' : ''}
-                > {t.all[language]}
+                >
+                  All
                 </button>
 
                 <button
-                  onClick={() => this.setState({ filter: 'fun' })}
+                  onClick={() => {
+                    scrollToView('portfolio');
+                    this.setState({ filter: 'fun' });
+                  }}
                   className={filter === 'fun' ? 'active' : ''}
                 >
-                  {t.fun[language]}
+                  Fun
                 </button>
 
                 <button
-                  onClick={() => this.setState({ filter: 'corporate' })}
+                  onClick={() => {
+                    scrollToView('portfolio');
+                    this.setState({ filter: 'corporate' });
+                  }}
                   className={filter === 'corporate' ? 'active' : ''}
                 >
-                  {t.corporate[language]}
+                  Large
                 </button>
 
                 <button
-                  onClick={() => this.setState({ filter: 'plugin' })}
+                  onClick={() => {
+                    scrollToView('portfolio');
+                    this.setState({ filter: 'plugin' });
+                  }}
                   className={filter === 'plugin' ? 'active' : ''}
                 >
-                  {t.plugins[language]}
+                  Plugins
                 </button>
 
                 <button
-                  onClick={() => this.setState({ filter: 'solo' })}
+                  onClick={() => {
+                    scrollToView('portfolio');
+                    this.setState({ filter: 'solo' });
+                  }}
                   className={filter === 'solo' ? 'active' : ''}
                 >
-                  {t.solo[language]}
+                  Solo
                 </button>
-
               </nav>
 
               <FlipMove>
                 {projects
                   .filter(project => !filter || project.category === filter)
-                  .map(project => <Article key={project.title.pl} {...project} language={language} /> )
-                }
+                  .map(project => (
+                    <Article
+                      key={project.title}
+                      {...project}
+                      language={language}
+                      isMobile={isMobile}
+                    />
+                  ))}
               </FlipMove>
             </div>
-            <button onClick={() => scrollToView('app')} className="up" aria-label="go to top"><Up alt="go up to top" /></button>
-
+            <button
+              onClick={() => scrollToView('app')}
+              className="up"
+              aria-label="go to top"
+            >
+              <Up alt="go up to top" />
+            </button>
           </section>
         </main>
         <footer>
-          <Col sm={4} xs={12}> © {new Date().getFullYear()} Adam Gajzlerowicz </Col>
-
-          <Col sm={8} xs={12} className="footer-social">
-            <a href="https://twitter.com/nelf86" aria-label="see me on twitter" target="_blank" rel="noopener noreferrer" ><Twitter alt="see me on twitter" /></a>
-            <a href="https://steamcommunity.com/id/entity02" aria-label="see me on steam" target="_blank" rel="noopener noreferrer" ><Steam alt="see me on steam" /></a>
-            <a href="https://www.linkedin.com/in/adam-gajzlerowicz-26311934" aria-label="see me on linkedin" target="_blank" rel="noopener noreferrer" ><LinkedIn alt="see me on linkedin" /></a>
-            <a href="https://github.com/adamgajzlerowicz" aria-label="see me on github" target="_blank" rel="noopener noreferrer" ><Github alt="see me on github" /></a>
-            <a href="https://stackoverflow.com/users/1333744/adam" aria-label="see me on stack overflow" target="_blank" rel="noopener noreferrer" ><StackOverflow alt="see me on stack overflow" /></a>
-            <a href="mailto:nelf86@gmail.com" aria-label="sene me an email" target="_blank" rel="noopener noreferrer" ><Email alt="send me an email" /></a>
+          <Col sm={4} xs={12}>
+            © {new Date().getFullYear()} Adam Gajzlerowicz
           </Col>
 
+          <Col sm={8} xs={12} className="footer-social">
+            <a
+              href="https://github.com/adamgajzlerowicz"
+              aria-label="see me on github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github alt="see me on github" />
+            </a>
+            <a
+              href="https://stackoverflow.com/users/1333744/adam"
+              aria-label="see me on stack overflow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <StackOverflow alt="see me on stack overflow" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/adam-gajzlerowicz-26311934"
+              aria-label="see me on linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedIn alt="see me on linkedin" />
+            </a>
+            <a
+              href="https://twitter.com/nelf86"
+              aria-label="see me on twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter alt="see me on twitter" />
+            </a>
+            <a
+              href="https://steamcommunity.com/id/entity02"
+              aria-label="see me on steam"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Steam alt="see me on steam" />
+            </a>
+
+            <a
+              href="mailto:nelf86@gmail.com"
+              aria-label="sene me an email"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Email alt="send me an email" />
+            </a>
+          </Col>
         </footer>
       </div>
     );
