@@ -1,14 +1,11 @@
 import React from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import Terms from './components/terms';
 import Home from './components/home';
 
-const customHistory = createBrowserHistory();
-
 export default () =>
-  <Router history={customHistory}>
+  <HashRouter basename="/">
     <Switch>
       <Route path="/terms">
         <Terms />
@@ -16,8 +13,8 @@ export default () =>
       <Route path="/">
         <Home />
       </Route>
-      <Route path="/">
+      <Route path="*">
         <Home />
       </Route>
     </Switch>
-  </Router>;
+  </HashRouter>;
