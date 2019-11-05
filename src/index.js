@@ -5,6 +5,6 @@ import ReactDOM from 'react-dom';
 import './styles-mobile.css';
 import './styles-desktop.css';
 import './styles.css';
-import Home from './components/home';
+import Router from './router';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(<Router />, document.getElementById('root'));

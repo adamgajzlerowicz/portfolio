@@ -5,11 +5,13 @@
   "private": false,
   "dependencies": {
     "eslint": "^4.9.0",
-    "react": "^16.3.2",
+    "history": "^4.10.1",
+    "react": "^16.11.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.2",
     "react-flip-move": "^3.0.2",
     "react-icons": "^2.2.7",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "1.1.4"
   },
   "scripts": {
@@ -19,7 +21,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint src --ext .js --cache --fix",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix",
     "push": "git add .; git commit -m 'push'; git push; yarn deploy",
     "analyze": "source-map-explorer build/static/js/main.*"
   },

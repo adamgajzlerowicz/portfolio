@@ -6,7 +6,6 @@ body {
 
 .app-header {
   color: white;
-  background-color: #f5f8fa;
   padding: 13vh 20px 0;
   border: 1px solid rgba(0, 0, 0, 0.125);
   text-align: center;
@@ -315,4 +314,10 @@ p {
   font-family: 'Montserrat', Serif;
   font-size: 18px;
   line-height: 28px;
+}
+
+.privacy-container {
+  padding: 32px;
+  margin: 0 auto;
+  max-width: 1100px;
 }
