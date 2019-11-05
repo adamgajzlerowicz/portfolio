@@ -212,14 +212,6 @@ class Home extends Component {
               <LinkedIn alt="see me on linkedin" />
             </a>
             <a
-              href="https://twitter.com/nelf86"
-              aria-label="see me on twitter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Twitter alt="see me on twitter" />
-            </a>
-            <a
               href="https://steamcommunity.com/id/entity02"
               aria-label="see me on steam"
               target="_blank"
