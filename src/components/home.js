@@ -222,7 +222,7 @@ class Home extends Component {
 
             <a
               href="mailto:nelf86@gmail.com"
-              aria-label="sene me an email"
+              aria-label="email me"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -69,8 +69,8 @@ class Article extends React.PureComponent {
             <h2 className="article-heading">{title}</h2>
             <p className="article-content">{description}</p>
             <p className="tags">
-              Technologies used:
               <span>{technologies.join(', ')}</span>
+              Technologies used:
             </p>
           </Col>
         </article>
